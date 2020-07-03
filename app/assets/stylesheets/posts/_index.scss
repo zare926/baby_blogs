@@ -21,7 +21,7 @@
       &-name {
         text-align: center;
         font-size: 80px;
-        color: #fff;
+        color: rgb(253, 250, 243);
         font-family: 'Courier New','fantasy';
       }
     }
@@ -74,14 +74,14 @@
         font-size: 26px;
         line-height: 0;
         font-family: 'Courier New','fantasy';
-
-        font-weight: 100;
         &logo{
           text-decoration: none;
-          color: rgb(92, 89, 83);
+          color: rgb(87, 86, 83);
+          transition: 0.7s;
           opacity: 0;
         }
         &logotop{
+          transition: 1.0s;
           opacity: 1;
         }
       }
