@@ -1,4 +1,6 @@
 $(function(){
+
+  // headerが一番上までスクロールされたら固定処理
   let header = $('.main_header'),
       offset = header.offset();
   
@@ -14,7 +16,13 @@ $(function(){
       title.removeClass("main_header-titlelogotop");
       
  		 }
-	});
+  });
+
+
+  
+  // $('.item').hover(function(){
+  //     this.style.color = "#6b6b71"
+  // });
 });
 
 
