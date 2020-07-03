@@ -13,6 +13,10 @@ html{
 	TODO test putting a class on HEAD.
 		- Fails on FF.
 */
+body{
+	background: rgb(248, 204, 235);
+}
+
 body,
 div,
 dl,
@@ -40,6 +44,9 @@ th,
 td {
 	margin:0;
 	padding:0;
+}
+a{
+	text-decoration: none;
 }
 table {
 	border-collapse:collapse;
