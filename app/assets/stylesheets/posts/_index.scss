@@ -137,7 +137,6 @@
           top: 29px;
           right: 34px;
           width: 176px;
-          font-size: 15px;
           .search{
             .bsearch_input:placeholder-shown{
               font-family: 'Cormorant Upright',serif;
@@ -177,12 +176,17 @@
             .bsearch_btn{
               position: absolute;
               top: 50%;
+              right: -999px;
+            }
+            .search_icon{
+              z-index: 300;
+            }
+            .fa-search{
+              position: absolute;
+              top: 10%;
               right: 0;
-              width: 13px;
-              height: 13px;
-              margin-top: -5px;
-              background-image: image-url('search_icon.png');
-              text-indent: -999em;
+              color: #8a8a8a;
+              cursor: pointer;
             }
           }
         }
