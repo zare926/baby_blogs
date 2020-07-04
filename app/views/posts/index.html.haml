@@ -20,5 +20,17 @@
               = link_to 'INFO','#',class:'item'
             %li.bnav_items
               = link_to 'LOGIN','#',class:'item'
+        .bsearch
+          %form.search
+            %input{type:'text' ,placeholder:'Search',class:'bsearch_input',style:'font-size:15px'}
+            %button{type:'submit', class:'bsearch_btn'} Search
+      %nav.snav
+        %ul.snav-options
+          %li.snav_icon
+            = link_to '#' do
+              %i.fab.fa-twitter
+          %li.snav_icon
+            = link_to '#' do
+              %i.fab.fa-facebook-square
 
     .main_content
