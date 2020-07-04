@@ -18,11 +18,12 @@ $(function(){
  		 }
   });
 
+  const search = $('.fa-search');
+  const btn = $('.bsearch_btn');
 
-  
-  // $('.item').hover(function(){
-  //     this.style.color = "#6b6b71"
-  // });
+  $(search).on('mousedown',function(){
+    $(btn).click();
+  });
 });
 
 
