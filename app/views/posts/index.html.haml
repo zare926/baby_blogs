@@ -25,6 +25,7 @@
             %input{type:'text' ,placeholder:'Search',class:'bsearch_input',size:'15px',style:'font-size: 1rem'}
             %button{type:'submit', class:'bsearch_btn'} Search
             %i.fas.fa-search
+      .b-header
       %nav.snav
         %ul.snav-options
           %li.snav_icon
@@ -40,3 +41,6 @@
             %figre.article-image
               = image_tag asset_path('baby.jpeg'),class:'image'
             .article_text-box
+              .article_text-box-top
+                %p.article_logo BLOG
+              .article_text-box-bottom
