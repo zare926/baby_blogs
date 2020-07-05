@@ -233,11 +233,9 @@
       position: relative;
       width: 100%;
       margin: 0 auto;
-      height: 800px;
       &-box{
         max-width: 994px;
         margin: 0 auto;
-        background: khaki;
         .article-list{
           margin-top: 10rem;
           .article{
@@ -271,14 +269,34 @@
               &-top{
                 .article_logo{
                   position: absolute;
-                  top: -27px;
+                  top: -30px;
                   left: 31px;
                   font-family: 'Cormorant Upright',serif;
                   font-size: 50px;
-                  font-size: 4rem;
+                  font-size: 3rem;
                   line-height: 1.1;
                   color: #808085;
                   z-index: 10;
+                }
+                .article_title{
+                  color: #171717;
+                  &-b{
+                    margin-top: -.4rem;
+                    font-weight: 700;
+                    line-height: 1.6;
+                  }
+                  .article_time{
+                    margin-top: 1rem;
+                    font-size: 11px;
+                    font-family: 'Open Sans',sans-serif;
+                    color: #171717;
+                  }
+                  .article_summary{
+                    margin-top: 1.3rem;
+                    color: #808085;
+                    font-size: 13px;
+                    line-height: 1.5;
+                  }
                 }
               }
               &-bottom{
