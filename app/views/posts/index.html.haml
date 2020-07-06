@@ -25,6 +25,7 @@
             %input{type:'text' ,placeholder:'Search',class:'bsearch_input',size:'15px',style:'font-size: 1rem'}
             %button{type:'submit', class:'bsearch_btn'} Search
             %i.fas.fa-search
+      .b-header
       %nav.snav
         %ul.snav-options
           %li.snav_icon
@@ -33,5 +34,45 @@
           %li.snav_icon
             = link_to '#' do
               %i.fab.fa-facebook-square
-
     .main_content
+      .main_content-box
+        .article-list
+          .article.b-article
+            %figre.article-image
+              = image_tag asset_path('baby.jpeg'),class:'image'
+            .article_text-box
+              .article_text-box-top
+                %p.article_logo BLOG
+                %a{href:'#',class:'article_title'}
+                  %h2.article_title-b 眠そうですね。ママも眠いです。
+                  %p.article_time 2020.07.06
+                  %p.article_summary
+                    今日は6時に起きて活動開始
+                    %br
+                    7時まで寝て欲しかったけど、寝なかったのでママも活動開始。
+                    %br
+                    %br
+                    昨日作って置いたホットケーキを朝ごはんに、千疋屋の高いマンゴーを吐き出す息子。
+                    %br
+                    高いだから食べてよ...
+              .article_text-box-bottom
+          .article.b-article
+            %figre.article-image
+              = image_tag asset_path('baby.jpeg'),class:'image'
+            .article_text-box
+              .article_text-box-top
+                %p.article_logo BLOG
+                %a{href:'#',class:'article_title'}
+                  %h2.article_title-b 眠そうですね。ママも眠いです。
+                  %p.article_time 2020.07.06
+                  %p.article_summary
+                    今日は6時に起きて活動開始
+                    %br
+                    7時まで寝て欲しかったけど、寝なかったのでママも活動開始。
+                    %br
+                    %br
+                    昨日作って置いたホットケーキを朝ごはんに、千疋屋の高いマンゴーを吐き出す息子。
+                    %br
+                    高いだから食べてよ...
+              .article_text-box-bottom
+            
