@@ -322,6 +322,9 @@
             line-height: 0;
             cursor: pointer;
           }
+          .b-article:not(:first-of-type){
+            margin-top: 9rem;
+          }
         }
       }
     }
