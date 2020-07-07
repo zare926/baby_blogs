@@ -43,7 +43,7 @@ $(function(){
     const topImage = $('.top_logoarea');
     $(topImage).css({opacity:'0'});
     setTimeout(function(){
-        $(topImage).stop().animate({opacity:'1'},3000);
+        $(topImage).stop().animate({opacity:'1'},6000);
     },2500);
   });
 
@@ -53,7 +53,7 @@ $(function(){
     $(main).css({opacity:'0'});
     setTimeout(function(){
         $(main).stop().animate({opacity:'1'},1000);
-    },2000);
+    },2200);
   });
 
   // ローディング
