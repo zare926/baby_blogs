@@ -1,15 +1,4 @@
-.loading
-  .loading_box
-    %span.loading_box-logo
-      %span B
-      %span a
-      %span b
-      %span y
-      %span B
-      %span L
-      %span O
-      %span G
-      %span s
+= render 'posts/loading'
 .container
   %header.top
     .top_logo
@@ -18,77 +7,5 @@
       = image_tag asset_path('top.jpeg'), class: "top_logoarea-image"
   .fake
   .main
-    %header.main_header
-      %h1.main_header-title
-        = link_to 'Baby BLOGs', "#",class:'main_header-titlelogo'
-      .main_header-link
-        %nav.bnav
-          %ul.bnav-options
-            %li.bnav_items
-              = link_to 'NEW','#',class:'item'
-            %li.bnav_items
-              = link_to 'MYBLOG','#',class:'item'
-            %li.bnav_items
-              = link_to 'INFO','#',class:'item'
-            %li.bnav_items
-              = link_to 'LOGIN','#',class:'item'
-        .bsearch
-          %form.search
-            %input{type:'text' ,placeholder:'Search',class:'bsearch_input',size:'15px',style:'font-size: 1rem'}
-            %button{type:'submit', class:'bsearch_btn'} Search
-            %i.fas.fa-search
-      .b-header
-      %nav.snav
-        %ul.snav-options
-          %li.snav_icon
-            = link_to '#' do
-              %i.fab.fa-twitter
-          %li.snav_icon
-            = link_to '#' do
-              %i.fab.fa-facebook-square
-    .main_content
-      .main_content-box
-        .article-list
-          .article.b-article
-            %figre.article-image
-              = image_tag asset_path('baby.jpeg'),class:'image'
-            .article_text-box
-              .article_text-box-top
-                %p.article_logo BLOG
-                %a{href:'#',class:'article_title'}
-                  %h2.article_title-b 眠そうですね。ママも眠いです。
-                  %p.article_time 2020.07.06
-                  %p.article_summary
-                    今日は6時に起きて活動開始
-                    %br
-                    7時まで寝て欲しかったけど、寝なかったのでママも活動開始。
-                    %br
-                    %br
-                    昨日作って置いたホットケーキを朝ごはんに、千疋屋の高いマンゴーを吐き出す息子。
-                    %br
-                    高いのだから食べてよ...
-              .article_text-box-bottom
-                %ul.article_tag
-                  %li.article_tag-name
-                    %a{href:'#',class:'tag_link'}
-                      Baby
-          .article.b-article
-            %figre.article-image
-              = image_tag asset_path('baby.jpeg'),class:'image'
-            .article_text-box
-              .article_text-box-top
-                %p.article_logo BLOG
-                %a{href:'#',class:'article_title'}
-                  %h2.article_title-b 眠そうですね。ママも眠いです。
-                  %p.article_time 2020.07.06
-                  %p.article_summary
-                    今日は6時に起きて活動開始
-                    %br
-                    7時まで寝て欲しかったけど、寝なかったのでママも活動開始。
-                    %br
-                    %br
-                    昨日作って置いたホットケーキを朝ごはんに、千疋屋の高いマンゴーを吐き出す息子。
-                    %br
-                    高いのだから食べてよ...
-              .article_text-box-bottom
-            
+    = render 'posts/header'
+    = render 'posts/blog'
