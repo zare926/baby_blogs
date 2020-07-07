@@ -1,10 +1,12 @@
 $(function(){
-
-  const load = $('.loading');
-  load.fadeOut(4000);
-
-  // const loadLogo = $('.loading_logo');
-  // loadLogo.fadeOut(1800);
+  // ローディング
+  $(function(){
+    const load = $('.loading');
+    $(load).css({opacity:'1'});
+    setTimeout(function(){
+        $(load).stop().animate({opacity:'0'},1000);
+    },1500);
+  });
 
 
   // headerが一番上までスクロールされたら固定処理
@@ -25,6 +27,7 @@ $(function(){
  		 }
   });
 
+  // 検索のsubmitを押すための処理
   const search = $('.fa-search');
   const btn = $('.bsearch_btn');
 
@@ -33,24 +36,32 @@ $(function(){
   });
 
 
-
+  // ロゴフェードイン
   $(function(){
     const logo = $('.top_logo')
     $(logo).css({opacity:'0'});
     setTimeout(function(){
         $(logo).stop().animate({opacity:'1'},2000);
-    },3000);
+    },4000);
   });
 
+  // トップ画面フェードイン
   $(function(){
     const topImage = $('.top_logoarea');
     $(topImage).css({opacity:'0'});
     setTimeout(function(){
-        $(topImage).stop().animate({opacity:'1'},1500);
-    },2000);
+        $(topImage).stop().animate({opacity:'1'},3000);
+    },2500);
   });
 
-  // ロゴフェードイン
+  // 記事のサムネフェード
+  $(function(){
+    const main = $('.main')
+    $(main).css({opacity:'0'});
+    setTimeout(function(){
+        $(main).stop().animate({opacity:'1'},1000);
+    },2000);
+  });
   
 });
 
