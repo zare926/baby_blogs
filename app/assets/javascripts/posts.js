@@ -1,12 +1,5 @@
 $(function(){
-  // ローディング
-  $(function(){
-    const load = $('.loading');
-    $(load).css({opacity:'1'});
-    setTimeout(function(){
-        $(load).stop().animate({opacity:'0'},1000);
-    },1500);
-  });
+  
 
 
   // headerが一番上までスクロールされたら固定処理
@@ -62,7 +55,15 @@ $(function(){
         $(main).stop().animate({opacity:'1'},1000);
     },2000);
   });
-  
+
+  // ローディング
+  $(function(){
+    const load = $('.loading');
+    $(load).css({opacity:'1'});
+    setTimeout(function(){
+        $(load).stop().animate({opacity:'0'},1000);
+    },1500);
+  });
 });
 
 
