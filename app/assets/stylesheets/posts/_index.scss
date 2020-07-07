@@ -5,7 +5,6 @@
 	position: fixed;
 	top: 0;
   left: 0;
-  z-index: 40000;
   &_box{
     position: absolute;
     top: 50%;
@@ -374,7 +373,28 @@
                 }
               }
               &-bottom{
-
+                .article_tag{
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-orient: horizontal;
+                  -webkit-box-direction: normal;
+                  -ms-flex-flow: row wrap;
+                  flex-flow: row wrap;
+                  max-width: 384px;
+                  margin-top: auto;
+                  font-size: 13px;
+                  font-family: 'Open Sans',sans-serif;
+                  font-weight: 300;
+                  font-style: italic;
+                  &-name{
+                    line-height: 1.8;
+                    color: #171717;
+                    .tag_link{
+                      color: #171717;
+                    }
+                  }
+                }
               }
             }
           }
