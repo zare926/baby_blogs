@@ -1,10 +1,10 @@
 $(function(){
 
   const load = $('.loading');
-  load.fadeOut(2500);
+  load.fadeOut(4000);
 
-  const loadLogo = $('.loading_logo');
-  loadLogo.fadeOut(1800);
+  // const loadLogo = $('.loading_logo');
+  // loadLogo.fadeOut(1800);
 
 
   // headerが一番上までスクロールされたら固定処理
@@ -32,16 +32,26 @@ $(function(){
     $(btn).click();
   });
 
-  // const topImage = $('.top_logoarea');
-  // topImage.hide().fadeIn(5500);
+
 
   $(function(){
     const logo = $('.top_logo')
     $(logo).css({opacity:'0'});
     setTimeout(function(){
-        $(logo).stop().animate({opacity:'1'},1500);
+        $(logo).stop().animate({opacity:'1'},2000);
+    },3000);
+  });
+
+  $(function(){
+    const topImage = $('.top_logoarea');
+    $(topImage).css({opacity:'0'});
+    setTimeout(function(){
+        $(topImage).stop().animate({opacity:'1'},1500);
     },2000);
   });
+
+  // ロゴフェードイン
+  
 });
 
 
