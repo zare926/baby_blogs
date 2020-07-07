@@ -24,6 +24,10 @@ $(function(){
   $(search).on('mousedown',function(){
     $(btn).click();
   });
+
+  const logo = $('.top_logo');
+
+  logo.hide().fadeIn(5000);
 });
 
 
