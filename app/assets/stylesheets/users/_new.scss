@@ -8,7 +8,7 @@
   font-family: 'Courier New','fantasy';
   .new_title {
     width: 75%;
-    margin: 20% auto;
+    margin: 15% auto;
     margin-bottom: 100%;
     height: 100px;
     &-name {
@@ -23,26 +23,33 @@
 .field_new{
   padding-bottom: 20px;
   font-size: 20px;
-  #new_email{
+  .new_labelname{
+    margin-left: 10%;
+  }
+  .new_nickname{
     display: block;
-    width: 80%;
+    width: 75%;
     height: 40px;
     border: none;
     margin: 0 auto;
+    padding: 0 15px;
+  }
+  .new_email{
+    display: block;
+    width: 75%;
+    height: 40px;
+    border: none;
+    margin: 0 auto;
+    padding: 0 15px;
     // あとでまとめる
   }
-  #new_email:focus::placeholder{
-    color: transparent;
-  }
-  #new_password{
+  .new_password{
     display: block;
-    width: 80%;
+    width: 75%;
     height: 40px;
     border: none;
     margin: 0 auto;
-  }
-  #new_password:focus::placeholder{
-    color: transparent;
+    padding: 0 15px;
   }
 }
 

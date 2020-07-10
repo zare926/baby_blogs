@@ -4,22 +4,22 @@
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = render "devise/shared/error_messages", resource: resource
       .field_new
-        = f.label :Nickname
+        = f.label :Nickname,class:'new_labelname'
         %br/
         = f.text_field :nickname, autofocus: true, autocomplete: "nickname",class:'new_nickname'
       .field_new
-        = f.label :Email
+        = f.label :Email,class:'new_labelname'
         %br/
         = f.email_field :email, autofocus: true, autocomplete: "email",class:'new_email'
       .field_new
-        = f.label :Password
+        = f.label :Password,class:'new_labelname'
         - if @minimum_password_length
           %em
             (#{@minimum_password_length} characters minimum)
         %br/
         = f.password_field :password, autocomplete: "new-password",class:'new_password'
       .field_new
-        = f.label :Password_Confirmation
+        = f.label :Password_Confirmation,class:'new_labelname'
         %br/
         = f.password_field :password_confirmation, autocomplete: "new-password",class:'new_password'
       .actions
