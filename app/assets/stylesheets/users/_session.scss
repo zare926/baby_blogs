@@ -8,12 +8,12 @@
   font-family: 'Courier New','fantasy';
   .title{
     width: 75%;
-    margin: 25% auto;
+    margin: 20% auto;
     margin-bottom: 100%;
     height: 100px;
     &_logo{
       text-align: center;
-      font-size: 50px;
+      font-size: 40px;
       line-height: 100px;
     }
   }
@@ -24,8 +24,8 @@
   font-size: 20px;
   #user_email{
     display: block;
-    width: 90%;
-    height: 50px;
+    width: 80%;
+    height: 40px;
     border: none;
     margin: 0 auto;
     // あとでまとめる
@@ -35,8 +35,8 @@
   }
   #user_password{
     display: block;
-    width: 90%;
-    height: 50px;
+    width: 80%;
+    height: 40px;
     border: none;
     margin: 0 auto;
   }
@@ -54,16 +54,15 @@
     background: rgb(235, 236, 217);
     border: 1px solid gray;
     font-size: 20px;
-    width: 50%;
-    margin-left: 5%;
+    width: 53%;
+    margin-left: 10%;
     cursor: pointer;
   }
   // ログイン情報保存
   .field_check {
-    display: inline-block;
     font-size: 14px;
-    width: 30%;
-    margin-left: 8%;
+    float: right;
+    margin: 25px 10% 0 0;
   }
 }
 
@@ -82,7 +81,7 @@
 .newuser{
   &_btn{
     display: block;
-    width: 90%;
+    width: 80%;
     height: 20px;
     font-size: 20px;
     border: 1px solid gray;
@@ -97,3 +96,12 @@
 }
 
 // パスワード忘れた方はこちら
+.pass{
+  float: right;
+  margin-right: 10%;
+  &_los {
+    display: block;
+    color: black;
+    font-size: 14px;
+  }
+}
