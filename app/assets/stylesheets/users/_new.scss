@@ -54,31 +54,39 @@
 }
 
 // アイコン系の配置
-.icon_image{
-  box-shadow: 0 1px 3px black;
-  margin-left: 10%;
-  border-radius: 50%;
-  margin-top: 3px;
-}
-.icon_image-form{
-  display: none;
-}
-.icon_imagebtn{
-  border: 1px solid gray;
-  width: 108px;
-  text-align: center;
-  padding: 10px 5px;
-  font-size: 15px;
-  border-radius: 4px;
-  box-shadow: 0 2px 1px gray;
-  margin-left: 10%;
-}
-.icon_imagebtn:hover{
-  background-color: rgb(223, 223, 221);
-}
-.icon_imagebtn:active{
-  margin-top: 2px;
-  box-shadow: 0 0 1px gray
+.image_field-new{
+  padding-bottom: 20px;
+  font-size: 20px;
+  .new_labelname{
+    margin-left: 10%;
+  }
+  .icon_image{
+    box-shadow: 0 1px 3px black;
+    margin-left: 10%;
+    border-radius: 50%;
+    margin-top: 3px;
+  }
+  .icon_image-form{
+    display: none;
+  }
+  .icon_imagebtn{
+    border: 1px solid gray;
+    width: 108px;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 1px gray;
+    margin-left: 10%;
+  }
+  .icon_imagebtn:hover{
+    background-color: rgb(223, 223, 221);
+  }
+  .icon_imagebtn:active{
+    margin-top: 2px;
+    box-shadow: 0 0 1px gray;
+    padding-bottom: 8px;
+  }
 }
 
 // 画像配置
@@ -87,4 +95,26 @@
   top: 0;
   right: 0;
   width: 45%;
+}
+
+// 登録ボタン
+.dammy-area{
+  display: block;
+  height: 10px;
+  .actions_new{
+    padding-bottom: 20px;
+    font-size: 20px;
+    .signup_btn{
+      display: block;
+      width: 80%;
+      font-size: 20px;
+      border: 1px solid gray;
+      padding: 9px 0 9px;
+      color: black;
+      line-height: 1px;
+      margin: 0 auto;
+      line-height: 20px;
+      background: rgb(245, 247, 224);
+    }
+  }
 }
