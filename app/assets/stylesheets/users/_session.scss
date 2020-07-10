@@ -1,0 +1,107 @@
+// タイトル
+.login_area{
+  background: rgb(248, 246, 242);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 55%;
+  font-family: 'Courier New','fantasy';
+  .title{
+    width: 75%;
+    margin: 20% auto;
+    margin-bottom: 100%;
+    height: 100px;
+    &_logo{
+      text-align: center;
+      font-size: 40px;
+      line-height: 100px;
+    }
+  }
+}
+// IDとPW入力フォーム
+.field{
+  padding-bottom: 20px;
+  font-size: 20px;
+  #user_email{
+    display: block;
+    width: 80%;
+    height: 40px;
+    border: none;
+    margin: 0 auto;
+    // あとでまとめる
+  }
+  #user_email:focus::placeholder{
+    color: transparent;
+  }
+  #user_password{
+    display: block;
+    width: 80%;
+    height: 40px;
+    border: none;
+    margin: 0 auto;
+  }
+  #user_password:focus::placeholder{
+    color: transparent;
+  }
+}
+// ログインボタン
+.actions {
+  padding-bottom: 20px;
+  font-size: 20px;
+  .login{
+    display: inline-block;
+    padding: 8px 0;
+    background: rgb(235, 236, 217);
+    border: 1px solid gray;
+    font-size: 20px;
+    width: 53%;
+    margin-left: 10%;
+    cursor: pointer;
+  }
+  // ログイン情報保存
+  .field_check {
+    font-size: 14px;
+    float: right;
+    margin: 25px 10% 0 0;
+  }
+}
+
+
+// widthが1000px切ると画像の余白ができる。
+.login_image{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 45%;
+}
+
+
+
+// 新規登録ボタン
+.newuser{
+  &_btn{
+    display: block;
+    width: 80%;
+    height: 20px;
+    font-size: 20px;
+    border: 1px solid gray;
+    padding: 9px 0 9px;
+    color: black;
+    line-height: 1px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20px;
+    background: rgb(235, 236, 217);
+  }
+}
+
+// パスワード忘れた方はこちら
+.pass{
+  float: right;
+  margin-right: 10%;
+  &_los {
+    display: block;
+    color: black;
+    font-size: 14px;
+  }
+}

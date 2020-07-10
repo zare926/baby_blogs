@@ -1,0 +1,16 @@
+.login_area
+  .title
+    %h2.title_logo Baby BLOGs
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field
+        = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: " Email"
+      .field
+        = f.password_field :password, autocomplete: "current-password",placeholder: " Password"
+      .actions
+        = f.submit "Login",class:'login'
+        - if devise_mapping.rememberable?
+          .field_check
+            = f.check_box :remember_me,class:'remember_check'
+            = f.label :ログイン情報を保存,class:'remember_label'
+    = render "devise/shared/links"
+= image_tag asset_path('login_baby.jpeg'),class:'login_image'
