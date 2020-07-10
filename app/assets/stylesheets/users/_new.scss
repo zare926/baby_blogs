@@ -6,6 +6,44 @@
   width: 55%;
   height: 100%;
   font-family: 'Courier New','fantasy';
+  .new_title {
+    width: 75%;
+    margin: 20% auto;
+    margin-bottom: 100%;
+    height: 100px;
+    &-name {
+      text-align: center;
+      font-size: 40px;
+      line-height: 100px;
+    }
+  }
+}
+
+//ログインと同じ記述あとでまとめる
+.field_new{
+  padding-bottom: 20px;
+  font-size: 20px;
+  #new_email{
+    display: block;
+    width: 80%;
+    height: 40px;
+    border: none;
+    margin: 0 auto;
+    // あとでまとめる
+  }
+  #new_email:focus::placeholder{
+    color: transparent;
+  }
+  #new_password{
+    display: block;
+    width: 80%;
+    height: 40px;
+    border: none;
+    margin: 0 auto;
+  }
+  #new_password:focus::placeholder{
+    color: transparent;
+  }
 }
 
 
