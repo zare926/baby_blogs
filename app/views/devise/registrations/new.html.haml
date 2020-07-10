@@ -22,6 +22,12 @@
         = f.label :Password_Confirmation,class:'new_labelname'
         %br/
         = f.password_field :password_confirmation, autocomplete: "new-password",class:'new_password'
+      .field_new
+        = f.label :'Icon(Not essential)',class:'new_labelname'
+        %br/
+        = image_tag asset_path('new_baby.png'),class:'icon_image',size:"120x120"
+        = f.file_field :iconimage, autocomplete: "iconimage",class:'icon_image-form'
+        .icon_imagebtn File
       .actions
         = f.submit "Sign Up"
 = render "devise/shared/links"

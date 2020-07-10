@@ -26,6 +26,7 @@
   .new_labelname{
     margin-left: 10%;
   }
+  // あとでまとめる
   .new_nickname{
     display: block;
     width: 75%;
@@ -41,7 +42,6 @@
     border: none;
     margin: 0 auto;
     padding: 0 15px;
-    // あとでまとめる
   }
   .new_password{
     display: block;
@@ -53,6 +53,26 @@
   }
 }
 
+// アイコン系の配置
+.icon_image{
+  box-shadow: 0 1px 3px black;
+  margin-left: 10%;
+  border-radius: 50%;
+  margin-top: 3px;
+}
+.icon_image-form{
+  display: none;
+}
+.icon_imagebtn{
+  border: 1px solid gray;
+  width: 108px;
+  text-align: center;
+  padding: 10px 5px;
+  font-size: 15px;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px black;
+  margin-left: 10%;
+}
 
 // 画像配置
 .newuser_image {
