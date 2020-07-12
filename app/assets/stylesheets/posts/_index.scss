@@ -424,3 +424,16 @@
     }
   }
 }
+
+// アイコン
+.icon_area{
+  position: absolute;
+  top: 10px;
+  right: 830px;
+  line-height: 0;
+}
+.icon_areatop{
+  // アイコン系まとめられる
+  border-radius: 50%;
+  box-shadow: 0 1px 2px gray;
+}
