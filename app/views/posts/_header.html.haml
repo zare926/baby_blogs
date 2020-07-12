@@ -11,7 +11,10 @@
         %li.bnav_items
           = link_to 'INFO','#',class:'item'
         %li.bnav_items
-          = link_to 'LOGIN','#',class:'item'
+          - if user_signed_in?
+            = link_to 'LOGOUT',destroy_user_session_path,method: :delete,class:'item'
+          - else
+            = link_to 'LOGIN',new_user_session_path,class:'item'
     .bsearch
       %form.search
         %input{type:'text' ,placeholder:'Search',class:'bsearch_input',size:'15px',style:'font-size: 1rem'}

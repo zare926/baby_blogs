@@ -26,11 +26,11 @@
         = f.label :'Icon(Not essential)',class:'new_labelname'
         %br/
         = image_tag asset_path('new_baby.png'),class:'icon_image',size:"120x120"
-        = f.file_field :iconimage, autocomplete: "iconimage",class:'icon_image-form'
+        = f.file_field :icon, autocomplete: "icon",class:'icon_image-form'
         .icon_imagebtn File
       .dammy-area
         .actions_new
           = f.submit "Sign Up",class:'signup_btn'
+        = link_to '> ログインはこちら',new_user_session_path,class:'login_here'
 = render "devise/shared/links"
 = image_tag asset_path('newuser_baby.jpeg'),class:'newuser_image'
--# a

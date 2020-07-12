@@ -24,10 +24,11 @@
   font-size: 20px;
   #user_email{
     display: block;
-    width: 80%;
+    width: 75%;
     height: 40px;
     border: none;
     margin: 0 auto;
+    padding: 0 15px;
     // あとでまとめる
   }
   #user_email:focus::placeholder{
@@ -35,10 +36,11 @@
   }
   #user_password{
     display: block;
-    width: 80%;
+    width: 75%;
     height: 40px;
     border: none;
     margin: 0 auto;
+    padding: 0 15px;
   }
   #user_password:focus::placeholder{
     color: transparent;
@@ -81,11 +83,11 @@
 .newuser{
   &_btn{
     display: block;
-    width: 80%;
+    width: 75%;
     height: 20px;
     font-size: 20px;
     border: 1px solid gray;
-    padding: 9px 0 9px;
+    padding: 9px 15px;
     color: black;
     line-height: 1px;
     margin: 0 auto;
