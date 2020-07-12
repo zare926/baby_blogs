@@ -2,8 +2,6 @@
   %h1.main_header-title
     = link_to 'Baby BLOGs', "#",class:'main_header-titlelogo'
   .main_header-link
-    .icon_area
-      = link_to image_tag(current_user.icon.url,size:'40x40',class:'user_icon')
     %nav.bnav
       %ul.bnav-options
         %li.bnav_items
@@ -17,6 +15,8 @@
             = link_to 'LOGOUT',destroy_user_session_path,method: :delete,class:'item'
           - else
             = link_to 'LOGIN',new_user_session_path,class:'item'
+    .icon_area
+      = link_to image_tag(current_user.icon.url,size:'40x40',class:'user_icon'),user_path(current_user.id)
     .bsearch
       %form.search
         %input{type:'text' ,placeholder:'Search',class:'bsearch_input',size:'15px',style:'font-size: 1rem'}
