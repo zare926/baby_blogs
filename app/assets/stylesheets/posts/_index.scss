@@ -280,7 +280,7 @@
       .snav{
         position: absolute;
         top: 28px;
-        right: 310px;
+        right: 330px;
         line-height: 1.1;
         letter-spacing: 0;
         -webkit-transition: all .2s ease 0s;
@@ -288,7 +288,7 @@
         &-options{
           .snav_icon{
             display: inline-block;
-            margin-right: 15px;
+            margin-right: 10px;
             .fab {
               color: #C0C0C0;
             }
@@ -429,11 +429,12 @@
 .icon_area{
   position: absolute;
   top: 10px;
-  right: 830px;
+  right: 250px;
   line-height: 0;
+  border-radius: 50%;
 }
 .icon_areatop{
   // アイコン系まとめられる
-  border-radius: 50%;
+  transition: 1.0s;
   box-shadow: 0 1px 2px gray;
 }
