@@ -11,9 +11,9 @@
         %li.bnav_items
           = link_to 'INFO','#',class:'item'
         %li.bnav_items
-          = if user_signed_in?
+          - if user_signed_in?
             = link_to 'LOGOUT',destroy_user_session_path,method: :delete,class:'item'
-          = else
+          - else
             = link_to 'LOGIN',new_user_session_path,class:'item'
     .bsearch
       %form.search
