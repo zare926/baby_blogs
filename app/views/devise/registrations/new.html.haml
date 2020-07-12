@@ -31,6 +31,6 @@
       .dammy-area
         .actions_new
           = f.submit "Sign Up",class:'signup_btn'
+        = link_to '> ログインはこちら',new_user_session_path,class:'login_here'
 = render "devise/shared/links"
 = image_tag asset_path('newuser_baby.jpeg'),class:'newuser_image'
--# a
