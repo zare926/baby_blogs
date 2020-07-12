@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   has_many :posts ,dependent: :destroy
 
+  mount_uploader :icon, ImageUploader
+
   validates :nickname , presence: true
   validates :email, presence: true, 
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i, message: "は@とドメインを含んだものを入力してください" }, 
