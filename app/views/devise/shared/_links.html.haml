@@ -7,7 +7,7 @@
     %br/
 - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
   .pass
-    = link_to "パスワードを忘れた方はこちら", new_password_path(resource_name),class:'pass_los'
+    = link_to "> パスワードを忘れた方はこちら", new_password_path(resource_name),class:'pass_los'
     %br/
 - if devise_mapping.confirmable? && controller_name != 'confirmations'
   = link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name)
