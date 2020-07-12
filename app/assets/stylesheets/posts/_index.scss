@@ -280,7 +280,7 @@
       .snav{
         position: absolute;
         top: 28px;
-        right: 310px;
+        right: 280px;
         line-height: 1.1;
         letter-spacing: 0;
         -webkit-transition: all .2s ease 0s;
@@ -288,7 +288,7 @@
         &-options{
           .snav_icon{
             display: inline-block;
-            margin-right: 15px;
+            margin-right: 10px;
             .fab {
               color: #C0C0C0;
             }
@@ -422,5 +422,22 @@
         }
       }
     }
+  }
+}
+
+// アイコン
+.icon_area{
+  position: absolute;
+  bottom: -8px;
+  left: 380px;
+  line-height: 0;
+  // border-radius: 50%;
+  .user_icon{
+    border-radius: 50%;
+  }
+  .user_icontop{
+    // アイコン系まとめられる
+    transition: 1.0s;
+    box-shadow: 0 1px 2px gray;
   }
 }

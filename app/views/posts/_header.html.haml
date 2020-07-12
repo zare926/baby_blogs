@@ -13,6 +13,11 @@
         %li.bnav_items
           - if user_signed_in?
             = link_to 'LOGOUT',destroy_user_session_path,method: :delete,class:'item'
+            .icon_area
+              - if current_user.icon.present?
+                = link_to image_tag(current_user.icon.url,size:'40x40',class:'user_icon'),user_path(current_user.id)
+              - else
+                = link_to image_tag(asset_path('new_baby.png'),size:'40x40',class:'user_icon'),user_path(current_user.id)
           - else
             = link_to 'LOGIN',new_user_session_path,class:'item'
     .bsearch
