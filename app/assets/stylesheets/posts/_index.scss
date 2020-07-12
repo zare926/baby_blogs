@@ -428,13 +428,16 @@
 // アイコン
 .icon_area{
   position: absolute;
-  top: 13px;
-  right: 360px;
+  bottom: -8px;
+  left: 380px;
   line-height: 0;
-  border-radius: 50%;
-}
-.icon_areatop{
-  // アイコン系まとめられる
-  transition: 1.0s;
-  box-shadow: 0 1px 2px gray;
+  // border-radius: 50%;
+  .user_icon{
+    border-radius: 50%;
+  }
+  .user_icontop{
+    // アイコン系まとめられる
+    transition: 1.0s;
+    box-shadow: 0 1px 2px gray;
+  }
 }

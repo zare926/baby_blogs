@@ -7,20 +7,20 @@ $(function(){
       offset = header.offset();
   
   const title = $('.main_header-titlelogo');
-  const icon = $('.icon_area');
+  const icon = $('.user_icon');
   
 	$(window).scroll(function () {
  		 if($(window).scrollTop() > offset.top) {
       $(header).addClass("main_header-s");
       title.addClass("main_header-titlelogotop");
 
-      icon.addClass('icon_areatop');
+      icon.addClass('user_icontop');
 
  		 } else {
       $(header).removeClass("main_header-s");
       title.removeClass("main_header-titlelogotop");
       
-      icon.removeClass('icon_areatop');
+      icon.removeClass('user_icontop');
  		 }
   });
 
