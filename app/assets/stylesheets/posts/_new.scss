@@ -1,3 +1,4 @@
+// form用のタイトルロゴ
 .newpost_title{
   position: fixed;
   top: 21px;
@@ -7,5 +8,25 @@
   &logo{
     color: #575653;
     font-size: 26px;
+  }
+}
+
+// サイドバーより下にformを表示させる為
+.dammy_block{
+  height: 72px;
+}
+
+.post_form{
+margin: 0 auto;
+width: 900px;
+  .post_title{
+    display: block;
+    
+  }
+  .post_image{
+    display: block;
+  }
+  .post_text{
+    display: block;
   }
 }
