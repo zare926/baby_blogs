@@ -9,4 +9,4 @@
       = f.text_field :title, class:'post_title',placeholder:'Blog Title'
       = f.file_field :image, class:'post_image'
       .text_box
-        = f.text_area :text, class:'post_text'
+        = f.text_area :text, class:'post_text','data-provider': :summernote
