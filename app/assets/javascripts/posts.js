@@ -1,16 +1,17 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
   
-
+  
 
   // headerが一番上までスクロールされたら固定処理
   let header = $('.main_header'),
       offset = header.offset();
-  
+
   const title = $('.main_header-titlelogo');
   const icon = $('.user_icon');
   
 	$(window).scroll(function () {
  		 if($(window).scrollTop() > offset.top) {
+
       $(header).addClass("main_header-s");
       title.addClass("main_header-titlelogotop");
 

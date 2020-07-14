@@ -1,0 +1,52 @@
+// form用のタイトルロゴ
+.newpost_title{
+  position: fixed;
+  top: 21px;
+  left: 36px;
+  z-index: 200;
+  font-family: 'Courier New','fantasy';
+  &logo{
+    color: #575653;
+    font-size: 26px;
+  }
+}
+
+// サイドバーより下にformを表示させる為
+.dammy_block{
+  height: 72px;
+}
+.post{
+  margin: 0 auto;
+  width: 1000px;
+  height: 890px;
+  &_form{
+    margin: 0 auto;
+    width: 900px;
+    padding-top: 5px;
+    .post_title{
+      display: block;
+      width: 840px;
+      height: 40px;
+      margin: 10px auto;
+      border: none;
+      padding: 0 10px;
+    }
+    .post_image{
+      display: block;
+    }
+    .text_box{
+      width: 850px;
+      min-height: 100%;
+      background: gainsboro;
+      margin: 0 auto;
+      .post_text{
+        width: 640px;
+        height: 740px;
+        margin: 10px auto;
+        padding: 10px ;
+        resize: none;
+        border: none;
+      }
+    }
+  }
+}

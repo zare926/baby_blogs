@@ -68,3 +68,7 @@ gem 'font-awesome-sass','~> 5.4.1'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'bootstrap'
+gem 'summernote-rails'
+gem 'simple_form'

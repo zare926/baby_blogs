@@ -1,6 +1,15 @@
 @import "./reset";
 @import "posts/index";
+@import "posts/header";
+@import "posts/new";
 @import "users/session";
 @import "users/new";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+@import "bootstrap";
+@import "summernote-bs4";
+
+.bootstrap {
+  @import "bootstrap";
+}
