@@ -19,14 +19,29 @@
 .post_form{
 margin: 0 auto;
 width: 900px;
+height: 760px;
+padding-top: 5px;
   .post_title{
     display: block;
-    
+    width: 860px;
+    margin: 10px auto;
+    border: none;
   }
   .post_image{
     display: block;
   }
-  .post_text{
-    display: block;
+  .text_box{
+    width: 860px;
+    height: 760px;
+    background: gainsboro;
+    margin: 0 auto;
+    .post_text{
+      display: block;
+      width: 660px;
+      margin: 10px auto;
+      resize: none;
+      min-height: 100%;
+      border: none;
+    }
   }
 }
