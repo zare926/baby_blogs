@@ -50,21 +50,22 @@
 .actions {
   padding-bottom: 20px;
   font-size: 20px;
+  
   .login{
-    display: inline-block;
-    padding: 4px 0;
+    display: block;
+    padding: 9px 15px;
     background: rgb(235, 236, 217);
     border: 1px solid gray;
     font-size: 20px;
-    width: 45%;
-    margin-left: 12.5%;
+    width: 80%;
+    margin: 0 auto 10px auto;
     cursor: pointer;
   }
   // ログイン情報保存
   .field_check {
-    font-size: 14px;
     float: right;
-    margin: 25px 12.5% 0 0;
+    font-size: 14px;
+    margin: 5px 10% 0 0;
   }
 }
 
@@ -84,13 +85,13 @@
   &_btn{
     display: block;
     width: 75%;
-    height: 39px;
+    height: 20px;
     font-size: 20px;
     border: 1px solid gray;
     padding: 9px 15px;
     color: black;
     line-height: 1px;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
     text-align: center;
     line-height: 20px;
     background: rgb(235, 236, 217);
@@ -100,7 +101,7 @@
 // パスワード忘れた方はこちら
 .pass{
   float: right;
-  margin-right: 12.5%;
+  margin-right: 10%;
   &_los {
     display: block;
     color: black;
