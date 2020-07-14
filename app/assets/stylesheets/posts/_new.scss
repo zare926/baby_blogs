@@ -15,33 +15,41 @@
 .dammy_block{
   height: 72px;
 }
-
-.post_form{
-margin: 0 auto;
-width: 900px;
-height: 760px;
-padding-top: 5px;
-  .post_title{
-    display: block;
-    width: 860px;
-    margin: 10px auto;
-    border: none;
-  }
-  .post_image{
-    display: block;
-  }
-  .text_box{
-    width: 860px;
-    height: 760px;
-    background: gainsboro;
+.post{
+  margin: 0 auto;
+  width: 1000px;
+  height: 890px;
+  &_form{
     margin: 0 auto;
-    .post_text{
-      display: block;
-      width: 660px;
-      margin: 10px auto;
-      resize: none;
-      min-height: 100%;
-      border: none;
+    width: 900px;
+    padding-top: 5px;
+      .post_title{
+        display: block;
+        width: 840px;
+        height: 40px;
+        margin: 10px auto;
+        border: none;
+        padding: 0 10px;
+      }
+      .post_image{
+        display: block;
+      }
+      .text_box{
+        width: 850px;
+        height: 760px;
+        min-height: 100%;
+        background: gainsboro;
+        margin: 0 auto;
+        .post_text{
+          display: block;
+          width: 640px;
+          height: 740px;
+          margin: 10px auto;
+          padding: 10px ;
+          resize: none;
+          border: none;
+        }
+      }
     }
-  }
+    
 }

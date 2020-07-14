@@ -3,9 +3,10 @@
   = link_to 'Baby BLOGs', root_path,class:'newpost_titlelogo'
 
 .dammy_block
-.post_form
-  = form_with(model: @post, local: true) do |f|
-    = f.text_field :title, class:'post_title',placeholder:'Blog Title'
-    = f.file_field :image, class:'post_image'
-    .text_box
-      = f.text_area :text, class:'post_text'
+.post
+  .post_form
+    = form_with(model: @post, local: true) do |f|
+      = f.text_field :title, class:'post_title',placeholder:'Blog Title'
+      = f.file_field :image, class:'post_image'
+      .text_box
+        = f.text_area :text, class:'post_text'
