@@ -1,3 +1,4 @@
+
 // form用のタイトルロゴ
 .newpost_title{
   position: fixed;
@@ -25,7 +26,7 @@
     padding-top: 5px;
     .post_title{
       display: block;
-      width: 840px;
+      width: 830px;
       height: 40px;
       margin: 10px auto;
       border: none;
@@ -46,11 +47,18 @@
       }
     }
   }
+  // 画像フォームの擬似ボタン
+  // あとで投稿とコードをまとめる
   .image_form{
-    width: 860px;
+    font-family: 'Courier New','fantasy';
+    width: 850px;
     height: 400px;
     margin: 0 auto;
     background: #fff;
+    color: gray;
+    text-align: center;
+    line-height: 400px;
+    font-size: 30px;
     .post_image{
       display: none;
     }
@@ -63,14 +71,37 @@
     border: 1px solid gray;
     font-family: 'Courier New','fantasy';
     line-height: 30px;
-    margin: 10px 0 10px 20px;
+    margin: 10px 0 10px 25px;
     border-radius: 4px;
   }
   .image_form-btn:hover{
     background-color: rgb(223, 223, 221);
   }
   .image_form-btn:active{
-    margin: 12px 0 8px 20px;
+    margin: 12px 0 8px 25px;
+    box-shadow: 0 0 1px gray;
+  }
+
+// 投稿の擬似ボタン
+  .post_submit{
+    display: none;
+  }
+  .post_submit-dammy{
+    width: 150px;
+    height: 30px;
+    box-shadow: 0 2px 1px gray;
+    text-align: center;
+    border: 1px solid gray;
+    font-family: 'Courier New','fantasy';
+    line-height: 30px;
+    margin: 10px 0 10px 25px;
+    border-radius: 4px;
+  }
+  .post_submit-dammy:hover{
+    background-color: rgb(223, 223, 221);
+  }
+  .post_submit-dammy:active{
+    margin: 12px 0 8px 25px;
     box-shadow: 0 0 1px gray;
   }
 }

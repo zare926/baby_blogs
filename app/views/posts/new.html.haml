@@ -9,6 +9,9 @@
       = f.text_field :title, class:'post_title',placeholder:'Blog Title'
       .image_form
         = f.file_field :image, class:'post_image'
+        Image
       .image_form-btn Image Select
       .text_box.bootstrap
         = f.text_area :text, class:'post_text','data-provider': :summernote
+      = f.submit '投稿', class:'post_submit'
+      .post_submit-dammy 投稿

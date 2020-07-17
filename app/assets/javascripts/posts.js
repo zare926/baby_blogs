@@ -1,7 +1,5 @@
 $(document).on('turbolinks:load', function(){
   
-  
-
   // headerが一番上までスクロールされたら固定処理
   let header = $('.main_header'),
       offset = header.offset();
