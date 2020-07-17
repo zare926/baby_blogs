@@ -107,6 +107,7 @@ $(function(){
       return function(e){
         $(".image_area").attr("src", e.target.result);
         $(".image_area").attr("title", file.name);
+        $(".image_field-info").text('');
       };
     })(file);
     reader.readAsDataURL(file);

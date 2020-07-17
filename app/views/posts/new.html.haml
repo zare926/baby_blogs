@@ -8,7 +8,7 @@
     = form_with(model: @post, local: true) do |f|
       = f.text_field :title, class:'post_title',placeholder:'Blog Title'
       .image_field 
-        .image_field-info
+        %p.image_field-info
           Image Select
         = image_tag asset_path('baby_image.jpeg'),class:'image_area'
         = f.file_field :image, class:'image_form'
