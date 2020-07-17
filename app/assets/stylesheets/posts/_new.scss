@@ -31,9 +31,6 @@
       border: none;
       padding: 0 10px;
     }
-    .post_image{
-      display: block;
-    }
     .text_box{
       width: 850px;
       min-height: 100%;
@@ -48,5 +45,32 @@
         border: none;
       }
     }
+  }
+  .image_form{
+    width: 860px;
+    height: 400px;
+    margin: 0 auto;
+    background: #fff;
+    .post_image{
+      display: none;
+    }
+  }
+  .image_form-btn{
+    width: 150px;
+    height: 30px;
+    box-shadow: 0 2px 1px gray;
+    text-align: center;
+    border: 1px solid gray;
+    font-family: 'Courier New','fantasy';
+    line-height: 30px;
+    margin: 10px 0 10px 20px;
+    border-radius: 4px;
+  }
+  .image_form-btn:hover{
+    background-color: rgb(223, 223, 221);
+  }
+  .image_form-btn:active{
+    margin: 12px 0 8px 20px;
+    box-shadow: 0 0 1px gray;
   }
 }

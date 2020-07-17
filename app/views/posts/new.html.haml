@@ -7,7 +7,8 @@
   .post_form
     = form_with(model: @post, local: true) do |f|
       = f.text_field :title, class:'post_title',placeholder:'Blog Title'
-      
-      = f.file_field :image, class:'post_image'
+      .image_form
+        = f.file_field :image, class:'post_image'
+      .image_form-btn Image Select
       .text_box.bootstrap
         = f.text_area :text, class:'post_text','data-provider': :summernote
