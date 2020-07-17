@@ -1,7 +1,5 @@
 $(document).on('turbolinks:load', function(){
   
-  
-
   // headerが一番上までスクロールされたら固定処理
   let header = $('.main_header'),
       offset = header.offset();
@@ -69,7 +67,49 @@ $(document).on('turbolinks:load', function(){
         $(load).stop().animate({opacity:'0'},1000);
     },1500);
   });
+
+
+
+  // 投稿ページの画像選択ボタン
+  $(function(){
+    const realBtn = $('.image_form');
+    const fakeBtn = $('.image_form-btn');
+
+    $(fakeBtn).on('mousedown',function(){
+      $(realBtn).click();
+    });
+  });
+
+  // 投稿ページ、投稿ボタン
+  $(function(){
+    const realBtn = $('.post_submit');
+    const fakeBtn = $('.post_submit-dammy');
+
+    $(fakeBtn).on('mousedown',function(){
+      $(realBtn).click();
+    });
+  });
 });
 
-
-
+$(function(){
+  $('.image_form').change(function(e){
+    //ファイルオブジェクトを取得する
+    let file = e.target.files[0];
+    let reader = new FileReader();
+ 
+    //画像でない場合は処理終了
+    if(file.type.indexOf("image") < 0){
+      alert("画像ファイルを指定してください。");
+      return false;
+    }
+    //アップロードした画像を設定する
+    reader.onload = (function(file){
+      return function(e){
+        $(".image_area").attr("src", e.target.result);
+        $(".image_area").attr("title", file.name);
+        $(".image_field-info").text('');
+      };
+    })(file);
+    reader.readAsDataURL(file);
+  });
+});
