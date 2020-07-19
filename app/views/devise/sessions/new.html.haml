@@ -1,6 +1,6 @@
 .login_area
   .title
-    %h2.title_logo Baby BLOGs
+    = link_to 'Baby BLOGs',root_path,class:'title_logo'
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .field
         = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: " Email"
