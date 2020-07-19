@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :posts ,dependent: :destroy
 
-  mount_uploader :icon, ImageUploader
+  mount_uploader :icon, IconImageUploader
 
   validates :nickname , presence: true
   validates :email, presence: true, 
