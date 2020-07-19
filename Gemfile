@@ -72,3 +72,5 @@ gem 'mini_magick'
 gem 'bootstrap'
 gem 'summernote-rails'
 gem 'simple_form'
+
+gem 'pry-rails'
