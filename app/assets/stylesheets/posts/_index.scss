@@ -185,17 +185,17 @@
                     line-height: 1.6;
                   }
                   .article_time{
-                    margin-top: 1rem;
+                    margin: 1rem 0 1.3rem;
                     font-size: 11px;
                     font-family: 'Open Sans',sans-serif;
                     color: #171717;
                   }
-                  .article_summary{
-                    margin-top: 1.3rem;
-                    color: #808085;
-                    font-size: 13px;
-                    line-height: 1.5;
-                  }
+                
+                }
+                .article_title p{
+                  color: #808085;
+                  font-size: 13px;
+                  line-height: 1.5;
                 }
               }
               &-bottom{
