@@ -3,7 +3,4 @@ class Post < ApplicationRecord
   
   mount_uploader :image, ImageUploader
 
-  def shot_text
-    text[0, 20] + '...'
-  end
 end

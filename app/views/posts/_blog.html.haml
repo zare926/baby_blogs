@@ -14,7 +14,8 @@
                 %p.article_time
                   = p.created_at.strftime("%Y.%m.%d %H:%M")
                 %p.article_summary
-                  = strip_tags(p.text).truncate(60,omission: '...')
+                  -# = strip_tags(p.text).truncate(60,omission: '...')
                   -# = simple_format(h(text)).truncate(60,omission: '...')
                   -# = simple_format(p.text.slice(0..5) + '...')
+                  = simple_format(p.text.truncate(150))
             .article_text-box-bottom
