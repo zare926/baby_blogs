@@ -2,7 +2,7 @@
   .main_content-box
     .article-list
       - @posts.each do |p|
-        .article.b-article
+        .article.b-article.fadein
           %figre.article-image
             = image_tag p.image.url,class:'image'
           .article_text-box
