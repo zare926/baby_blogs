@@ -1,0 +1,7 @@
+= render 'posts/header'
+%h1.newpost_title
+  = link_to 'Baby BLOGs', root_path,class:'newpost_titlelogo'
+.show_main
+  .show_main-article
+    .show_main-article-image
+      = image_tag @post.image.url, class:'show_image'

@@ -1,0 +1,14 @@
+.show_main {
+  padding-top: 72px;
+  width: 100%;
+  position: relative;
+  &-article {
+    width: 100%;
+    &-image {
+      width: 825px;
+      margin: 0 auto;
+      .show_image{
+      }
+    }
+  }
+}
