@@ -5,3 +5,10 @@
   .show_main-article
     .show_main-article-image
       = image_tag @post.image.url, class:'show_image'
+      .img_article
+        .img_article-title
+          = @post.title
+        .img_article-created
+          = @post.created_at.strftime("%Y.%m.%d %H:%M")
+        .img_article-view
+          10 View

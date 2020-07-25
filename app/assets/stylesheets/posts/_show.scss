@@ -5,7 +5,8 @@
   &-article {
     width: 100%;
     &-image {
-      background-color: rgba(235, 234, 231, 0.493);
+      position: relative;
+      background-color: rgba(235, 234, 231, 0.534);
       width: 850px;
       height: 525px;
       margin: 0 auto;
@@ -19,9 +20,30 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: rgba(235, 234, 231, 0.493);
+        background-color: rgba(235, 234, 231, 0.582);
         opacity: 0.5;
-        display:block
+        display: block;
+      }
+      .img_article{
+        position: absolute;
+        top: 210px;
+        left: 245px;
+        width: 360px;
+        height: 105px;
+        text-align: center;
+        font-family: 'Courier New','fantasy';
+        color: ghostwhite;
+        &-title{
+          margin: 0.5em 0 0;
+          font-size: 25px;
+        }
+        &-created{
+          font-size: 13px;
+          margin-bottom: 1.5em;
+        }
+        &-view{
+          margin: 0.5em 0;
+        }
       }
     }
   }
