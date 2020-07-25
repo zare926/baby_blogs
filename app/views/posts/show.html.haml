@@ -12,3 +12,31 @@
           = @post.created_at.strftime("%Y.%m.%d %H:%M")
         .img_article-view
           10 View
+    .show_main-article-content
+      %nav.article_sns
+        %ul.article_sns-box
+          = link_to '#' do
+            %li.sns_icon-twitter
+              %i.fab.fa-twitter
+              ツイート
+          = link_to '#' do
+            %li.sns_icon-facebook
+              %i.fab.fa-facebook-square
+              シェア
+      .article_border
+      .article
+        .article_text
+          = simple_format(@post.text)
+        .article_user
+          = link_to @post.user.nickname, '#'
+      .article_border
+      %nav.article_sns
+        %ul.article_sns-box
+          = link_to '#' do
+            %li.sns_icon-twitter
+              %i.fab.fa-twitter
+              ツイート
+          = link_to '#' do
+            %li.sns_icon-facebook
+              %i.fab.fa-facebook-square
+              シェア

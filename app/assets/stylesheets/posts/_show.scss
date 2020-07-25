@@ -46,5 +46,69 @@
         }
       }
     }
+    &-content{
+      margin: 0 auto;
+      width: 850px;
+      .article_sns {
+        width: 300px;
+        margin: 0 auto;
+        &-box{
+          margin: 50px 0;
+          // あとでまとめる
+          .sns_icon-twitter{
+            margin-left: 27px;
+            display: inline-block;
+            background: #1b95e0;
+            width: 120px;
+            height: 25px;
+            text-align: center;
+            color: ghostwhite;
+            font-size: 11px;
+            line-height: 25px;
+            border-radius: 3px;
+            .fa-twitter{
+              font-size: 15px;
+            }
+          }
+          .sns_icon-facebook{
+            display: inline-block;
+            background: #4267b2;
+            width: 120px;
+            height: 25px;
+            text-align: center;
+            color: ghostwhite;
+            font-size: 11px;
+            line-height: 25px;
+            border-radius: 3px;
+            .fa-facebook-square{
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      // 線
+      .article_border {
+        width: 720px;
+        margin: 0 auto;
+        border-bottom: 0.5px solid gray;
+      }
+      .article {
+        margin: 0 auto;
+        width: 720px;
+        padding-top: 50px;
+        &_text{
+          font-size: 14px;
+          padding-bottom: 30px;
+        }
+        &_user{
+          text-align: right;
+          margin-bottom: 50px;
+        }
+        &_user a {
+          color: black;
+          border-bottom: 0.5px solid black;
+        }
+      }
+    }
   }
 }
