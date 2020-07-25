@@ -8,11 +8,11 @@
           .article_text-box
             .article_text-box-top
               %p.article_logo BLOG
-              %a{href:'#',class:'article_title'}
+              %a{href:post_path(p.id),class:'article_title'}
                 .article_title-b
                   = p.title
                 %p.article_time
                   = p.created_at.strftime("%Y.%m.%d %H:%M")
                 %p.article_summary
-                  = simple_format(p.text.truncate(150))
+                  = simple_format(p.text.truncate(150,omission: '...'))
             .article_text-box-bottom
