@@ -59,6 +59,14 @@ $(document).on('turbolinks:load', function(){
     },2200);
   });
 
+  $(function(){
+    const scrollBtn = $('.top_scroll')
+    $(scrollBtn).css({opacity:'0'});
+    setTimeout(function(){
+        $(scrollBtn).stop().animate({opacity:'1'},1000);
+    },2200);
+  });
+
   // ローディング
   $(function(){
     const load = $('.loading');
@@ -134,5 +142,24 @@ $(function(){
   animation();
   $(window).scroll(function (){
     animation();
+  });
+});
+
+// scrollボタン表示
+$(function(){
+  let pagetop = $('.top_scroll');
+  // ボタン非表示
+  pagetop.hide();
+  // 100px スクロールしたらボタン表示
+  $(window).scroll(function () {
+     if ($(this).scrollTop() > 1000) {
+          pagetop.fadeIn();
+     } else {
+          pagetop.fadeOut();
+     }
+  });
+  pagetop.click(function () {
+     $('body, html').animate({ scrollTop: 0 }, 750);
+     return false;
   });
 });
