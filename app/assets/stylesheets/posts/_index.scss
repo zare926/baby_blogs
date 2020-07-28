@@ -291,4 +291,33 @@
   }
 }
 
-
+// scrollボタン
+.top_scroll{
+  z-index: 300;
+  position: fixed;
+  left: 50%;
+  bottom: 25px;
+  width: 64px;
+  height: 64px;
+  &-btn{
+    position: relative;
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #ece8e5;
+    -webkit-box-shadow: 2px 2px 12px -3px #cfcac5;
+    box-shadow: 2px 2px 12px -3px #cfcac5;
+    -webkit-transition: background .3s ease-out 0s;
+    transition: background .3s ease-out 0s;
+    .fa-arrow-up{
+      position: absolute;
+      top: 42%;
+      left: 42%;
+      font-size: 12px;
+    }
+  }
+  &-btn:hover{
+    background-color: #c9c1bc;
+  }
+}
