@@ -106,7 +106,7 @@
         vertical-align: bottom;
       }
       &-image {
-        transform: translate(0%, -50%) matrix(1, 0, 0, 1, 0, 20);
+        transform: translate(0%, -59%) matrix(1, 0, 0, 1, 0, 20);
         position: absolute;
         top: 50%;
         left: 0;
@@ -125,7 +125,6 @@
     position: relative;
     width: 100%;
     padding-top: 72px;
-    padding-bottom: 180px;
     background:  rgb(248, 246, 242);
     transition: background .3s ease 0s;
     &_content{
