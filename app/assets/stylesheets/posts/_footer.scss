@@ -4,4 +4,19 @@
   width: 100%;
   background: rgb(201, 198, 193);
   margin-top: 100px;
+  &-left{
+    background: red;
+    height: 100%;
+    width: 500px;
+    margin-left: 40px;
+    .footer_title{
+
+    }
+    .footer_sns{
+      
+    }
+  }
+  &-right{
+    background: blue;
+  }
 }
