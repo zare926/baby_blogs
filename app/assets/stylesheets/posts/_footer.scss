@@ -5,15 +5,36 @@
   background: rgb(201, 198, 193);
   margin-top: 100px;
   &-left{
-    background: red;
+    position: relative;
     height: 100%;
     width: 500px;
     margin-left: 40px;
+    font-family: 'Courier New','fantasy';
+    font-weight: 100;
     .footer_title{
-
+      position: absolute;
+      top: 70px;
+      left: 60px;
+      font-size: 45px;
+      color: rgb(58, 58, 58);
     }
     .footer_sns{
-      
+      position: absolute;
+      top: 130px;
+      left: 70px;
+      font-size: 20px;
+      .fa-twitter{
+        color: ivory;
+      }
+      .fa-twitter:hover{
+        color: #1b95e0;
+      }
+      .fa-facebook-square{
+        color: ivory;
+      }
+      .fa-facebook-square:hover{
+        color: #4267b2;
+      }
     }
   }
   &-right{
