@@ -163,3 +163,17 @@ $(document).on('turbolinks:load', function(){
      return false;
   });
 });
+
+
+$(window).on('scroll', function () {
+  var doch = $(document).innerHeight(); //ページ全体の高さ
+  var winh = $(window).innerHeight(); //ウィンドウの高さ
+  var bottom = doch - winh; //ページ全体の高さ - ウィンドウの高さ = ページの最下部位置
+  if (bottom <= $(window).scrollTop()) {
+  //一番下までスクロールした時に実行
+    $('.top_scroll').css({'left':'90%','bottom':'320px','transition':'.5s'});
+  }
+  else {
+    $('.top_scroll').css({'left':'50%','bottom':'25px'});
+  }
+});
