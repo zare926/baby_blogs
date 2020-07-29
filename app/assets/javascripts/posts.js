@@ -146,7 +146,7 @@ $(function(){
 });
 
 // scrollボタン表示
-$(function(){
+$(document).on('turbolinks:load', function(){
   let pagetop = $('.top_scroll');
   // ボタン非表示
   pagetop.hide();
