@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :set_params, only:[:show]
   def index
     @posts = Post.all.order("created_at DESC")
+    @d = Date.today
   end
 
   def show
