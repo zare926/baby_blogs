@@ -74,3 +74,5 @@ gem 'summernote-rails'
 gem 'simple_form'
 
 gem 'pry-rails'
+
+gem 'kaminari'
