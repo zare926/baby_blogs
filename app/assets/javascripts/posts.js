@@ -146,7 +146,7 @@ $(function(){
 });
 
 // scrollボタン表示
-$(function(){
+$(document).on('turbolinks:load', function(){
   let pagetop = $('.top_scroll');
   // ボタン非表示
   pagetop.hide();
@@ -162,4 +162,18 @@ $(function(){
      $('body, html').animate({ scrollTop: 0 }, 750);
      return false;
   });
+});
+
+// ページが一番下までスクロールされた時に、スクロールボタン移動
+$(window).on('scroll', function () {
+  var doch = $(document).innerHeight(); //ページ全体の高さ
+  var winh = $(window).innerHeight(); //ウィンドウの高さ
+  var bottom = doch - winh; //ページ全体の高さ - ウィンドウの高さ = ページの最下部位置
+  if (bottom <= $(window).scrollTop()) {
+  //一番下までスクロールした時に実行
+    $('.top_scroll').css({'left':'90%','bottom':'320px','transition':'.5s'});
+  }
+  else {
+    $('.top_scroll').css({'left':'50%','bottom':'25px'});
+  }
 });
