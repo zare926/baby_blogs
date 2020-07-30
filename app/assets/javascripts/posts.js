@@ -164,7 +164,7 @@ $(document).on('turbolinks:load', function(){
   });
 });
 
-
+// ページが一番下までスクロールされた時に、スクロールボタン移動
 $(window).on('scroll', function () {
   var doch = $(document).innerHeight(); //ページ全体の高さ
   var winh = $(window).innerHeight(); //ウィンドウの高さ

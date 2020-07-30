@@ -1,14 +1,17 @@
 .main_footer{
+  position: relative;
   z-index: 300;
   height: 300px;
   width: 100%;
   background: rgb(201, 198, 193);
   margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
   &-left{
     position: relative;
     height: 100%;
-    width: 500px;
-    margin-left: 40px;
+    width: 380px;
+    margin: 0 100px 0 40px;
     font-family: 'Courier New','fantasy';
     font-weight: 100;
     .footer_title{
@@ -37,7 +40,40 @@
       }
     }
   }
-  &-right{
-    background: blue;
+  &-center{
+    // background: red;
+    width: 30%;
+    height: 300px;
+    .menu{
+      margin: 70px 0 0 30px;
+      &_list{
+        margin-bottom: 10px;
+        &-btn{
+          font-size: 13px;
+          color: rgb(58, 58, 58);
+        }
+      }
+    }
   }
+  &-right{
+    // background: blue;
+    width: 30%;
+    height: 300px;
+    .menu{
+      margin: 70px 0 0 30px;
+      &_list{
+        margin-bottom: 10px;
+        &-btn{
+          font-size: 13px;
+          color: rgb(58, 58, 58);
+        }
+      }
+    }
+  }
+}
+.main_footer-bottom{
+  margin: 0;
+  background: rgb(201, 198, 193);
+  text-align: center;
+  font-size: 11px;
 }
