@@ -321,3 +321,60 @@
     background-color: #e0e0e0;
   }
 }
+
+// kaminariのcss
+.pagination{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: 'Courier New','fantasy';
+  .current{
+    background: rgb(230, 225, 182);
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 3px 9px;
+  }
+  // ホバー系同じなのでまとめる
+  .page:hover{
+    background: rgb(245, 234, 141);
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 3px 9px; 
+  }
+  .first:hover{
+    background: rgb(245, 234, 141);
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 3px 9px; 
+  }
+  .prev:hover{
+    background: rgb(245, 234, 141);
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 3px 9px; 
+  }
+  .next:hover{
+    background: rgb(245, 234, 141);
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 3px 9px; 
+  }
+  .last:hover{
+    background: rgb(245, 234, 141);
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 3px 9px; 
+  }
+  .gap:hover{
+    background: rgba(255, 255, 255, 0);
+    padding: 3px 0; 
+  }
+}
+.pagination span{
+  color: black;
+  margin: 0 10px;
+  display: inline-block;
+}
+.pagination a{
+  color: black;
+}

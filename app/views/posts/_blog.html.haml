@@ -16,3 +16,4 @@
                 %p.article_summary
                   = simple_format(p.text.truncate(150,omission: '...'))
             .article_text-box-bottom
+      = paginate @posts

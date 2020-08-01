@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
   before_action :set_params, only:[:show]
+  before_action :time, only:[:index, :show]
+  PER = 7
+
   def index
-    @posts = Post.all.order("created_at DESC")
+    @posts = Post.all.order("created_at DESC").page(params[:page]).per(PER)
   end
 
   def show
@@ -29,6 +32,10 @@ class PostsController < ApplicationController
 
   def set_params
     @post = Post.find(params[:id])
+  end
+
+  def time
+    @d = Date.today
   end
   
 end
