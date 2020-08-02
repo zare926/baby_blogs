@@ -80,6 +80,7 @@ gem 'font-awesome-sass','~> 5.4.1'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog-aws'
 
 gem 'bootstrap'
 gem 'summernote-rails'
