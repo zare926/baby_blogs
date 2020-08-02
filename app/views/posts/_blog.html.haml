@@ -4,7 +4,10 @@
       - @posts.each do |p|
         .article.b-article.fadein
           %figre.article-image
-            = image_tag p.image.url,class:'image'
+            - if p.image.present?
+              = image_tag p.image.url,class:'image'
+            - else
+              = image_tag asset_path(''), class:'image'
           .article_text-box
             .article_text-box-top
               %p.article_logo BLOG
