@@ -5,10 +5,10 @@
         .article.b-article.fadein
           - if p.image.present?
             %figre.article-image
-              = image_tag p.image.url,class:'image'
+              = link_to (image_tag p.image.url,class:'image'),post_path(p.id)
           - else
             %figre.article-image
-              = image_tag asset_path('noimage.jpeg'), class:'image cover'
+              = link_to image_tag(asset_path('noimage.jpeg'), class:'image cover'),post_path(p.id)
               .image_box NonImage
           .article_text-box
             .article_text-box-top
