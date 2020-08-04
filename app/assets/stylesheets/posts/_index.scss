@@ -150,6 +150,17 @@
                 width: 100%;
                 height: auto;
               }
+              .cover{
+                opacity: 0.7;
+              }
+              .image_box{
+                position: absolute;
+                top: 50%;
+                left: 35%;
+                color: white;
+                font-family: 'Courier New','fantasy';
+                font-size: 30px;
+              }
             }
             &_text-box{
               display: -webkit-box;
