@@ -3,11 +3,13 @@
     .article-list
       - @posts.each do |p|
         .article.b-article.fadein
-          %figre.article-image
-            - if p.image.present?
+          - if p.image.present?
+            %figre.article-image
               = image_tag p.image.url,class:'image'
-            - else
-              = image_tag asset_path(''), class:'image'
+          - else
+            %figre.article-image
+              = image_tag asset_path('noimage.jpeg'), class:'image cover'
+              .image_box NonImage
           .article_text-box
             .article_text-box-top
               %p.article_logo BLOG
