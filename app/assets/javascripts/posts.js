@@ -99,7 +99,7 @@ $(document).on('turbolinks:load', function(){
   });
 });
 
-$(function(){
+$(document).on('turbolinks:load', function(){
   $('.image_form').change(function(e){
     //ファイルオブジェクトを取得する
     let file = e.target.files[0];
