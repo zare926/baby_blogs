@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_params, only:[:show]
-  before_action :time, only:[:index, :show]
+  before_action :time, only:[:index, :show,:new]
   PER = 7
 
   def index
