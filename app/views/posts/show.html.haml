@@ -15,7 +15,7 @@
         .img_article-created
           = @post.created_at.strftime("%Y.%m.%d %H:%M")
         .img_article-view
-          10 View
+          = @post.impressions_count
     .show_main-article-content
       %nav.article_sns
         %ul.article_sns-box
