@@ -3,7 +3,7 @@
     .ranking_name ACCESS RANKING
     - @ranking.each_with_index do |r, i|
       .ranking
-        .ranking_box.ranking_box-back
+        .ranking_box.ranking_box-back.ranking_box-zoom
           .ranking_image-fakebox
             .ranking_number
               = i + 1
@@ -12,6 +12,6 @@
           - else
             = link_to image_tag(asset_path('noimage.jpeg'),class:'ranking_image',size: '300x185'),post_path(r.id)
           .ranking_title
-            = r.title.truncate(20,omission: '...')
+            = r.title.truncate(17,omission: '...')
           .ranking_count
             = "#{r.impressions_count} view"

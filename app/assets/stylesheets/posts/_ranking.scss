@@ -32,6 +32,7 @@
     .ranking_image-fakebox{
       position: relative;
       .ranking_number{
+        z-index: 10;
         position: absolute;
         top: -21px;
         left: 5px;
@@ -46,7 +47,9 @@
       }
     }
     .ranking_title{
-  
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: 700;
     }
     .ranking_count{
       font-family: 'Cormorant Upright',serif;
@@ -99,4 +102,14 @@
 .ranking_box-back:hover::before {
   transform-origin: left top;
   transform: scale(1, 1);
+}
+
+// ランキング画像拡大
+
+.ranking_box-zoom img {
+	display: block;
+	transition: 0.5s;
+}
+.ranking_box-zoom img:hover {
+	transform: scale(1.05, 1.05);
 }
