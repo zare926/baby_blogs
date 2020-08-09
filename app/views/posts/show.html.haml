@@ -1,47 +1,5 @@
 = render 'posts/header'
 %h1.newpost_title
   = link_to 'Baby BLOGs', root_path,class:'newpost_titlelogo'
-.show_main
-  .show_main-article
-  - if @post.image.present?
-    .show_main-article-image
-      = image_tag @post.image.url, class:'show_image'
-  - else
-    .show_main-article-image
-      = image_tag asset_path('noimage.jpeg'),size:'850x525', class:'show_image'
-      .img_article
-        .img_article-title
-          = @post.title
-        .img_article-created
-          = @post.created_at.strftime("%Y.%m.%d %H:%M")
-        .img_article-view
-          = @post.impressions_count
-    .show_main-article-content
-      %nav.article_sns
-        %ul.article_sns-box
-          = link_to '#' do
-            %li.sns_icon-twitter
-              %i.fab.fa-twitter
-              ツイート
-          = link_to '#' do
-            %li.sns_icon-facebook
-              %i.fab.fa-facebook-square
-              シェア
-      .article_border
-      .article
-        .article_text
-          = simple_format(@post.text)
-        .article_user
-          = link_to @post.user.nickname, '#'
-      .article_border
-      %nav.article_sns
-        %ul.article_sns-box
-          = link_to '#' do
-            %li.sns_icon-twitter
-              %i.fab.fa-twitter
-              ツイート
-          = link_to '#' do
-            %li.sns_icon-facebook
-              %i.fab.fa-facebook-square
-              シェア
+= render 'posts/show_blog'
 = render 'posts/footer'
