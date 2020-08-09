@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order("created_at DESC").page(params[:page]).per(PER)
-    
+    @ranking = Post.all.limit(6)
   end
 
   def show

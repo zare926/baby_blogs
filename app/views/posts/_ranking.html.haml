@@ -1,3 +1,7 @@
 .ranking_content
   .ranking_content-box
     .ranking_name ACCESS RANKING
+    - @ranking.each_with_index do |r, i|
+      .ranking_box
+        .ranking_number
+          = i + 1
