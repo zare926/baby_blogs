@@ -1,16 +1,16 @@
 // ランキング全体
 .ranking_content{
-  position: relative;
   width: 100%;
   margin-top: 60px;
   &-box{
+    position: relative;
     max-width: 994px;
     margin: 0 auto;
-    padding-left: 20px;
+    padding: 40px 0 0 20px;
     .ranking_name{
       position: absolute;
       top: -30px;
-      left: 155px;
+      left: 40px;
       font-family: 'Cormorant Upright',serif;
       font-size: 50px;
       font-size: 3rem;
@@ -25,13 +25,32 @@
 .ranking_box{
   display: inline-block;
   width: 320px;
-  margin: 0 auto;
-  .ranking_number{
-    width: 20px;
-    height: 20px;
-    color: #808085;
-    border-radius: 50%;
+  margin: 20px auto;
+  .ranking_image-fakebox{
+    position: relative;
+    .ranking_number{
+      position: absolute;
+      top: -21px;
+      left: 5px;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      color: white;
+      background: #a8a8a8;
+      border-radius: 50%;
+      font-family: 'Cormorant Upright',serif;
+      text-align: center;
+    }
+  }
+  .ranking_title{
+
+  }
+  .ranking_count{
     font-family: 'Cormorant Upright',serif;
-    text-align: center;
+    color: rgb(158, 158, 158);
+    margin: 0.5em 0;
+    font-size: 13px;
   }
 }
+
+  

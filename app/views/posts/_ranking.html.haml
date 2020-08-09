@@ -3,8 +3,9 @@
     .ranking_name ACCESS RANKING
     - @ranking.each_with_index do |r, i|
       .ranking_box
-        .ranking_number
-          = i + 1
+        .ranking_image-fakebox
+          .ranking_number
+            = i + 1
         = link_to (image_tag r.image.url,class:'ranking_image',size: '300x185'),post_path(r.id)
         .ranking_title
           = r.title
