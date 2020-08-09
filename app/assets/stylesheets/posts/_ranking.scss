@@ -1,12 +1,12 @@
 // ランキング全体
 .ranking_content{
   width: 100%;
-  margin-top: 60px;
+  margin-top: 100px;
   &-box{
     position: relative;
     max-width: 994px;
     margin: 0 auto;
-    padding: 40px 0 0 20px;
+    padding: 20px 0 0 20px;
     .ranking_name{
       position: absolute;
       top: -30px;
@@ -53,4 +53,9 @@
   }
 }
 
-  
+  // フェードイン用
+.fadein {
+  opacity : 0;
+  transform: translateY(50px);
+  transition: 2s;
+}
