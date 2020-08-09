@@ -6,6 +6,9 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order("created_at DESC").page(params[:page]).per(PER)
+    @ranking = Post.all.order('impressions_count DESC').limit(6)
+                  # .where("? <= created_at", Time.now.week)
+                  # .where("created_at <= ?", Time.now).take(6)
   end
 
   def show

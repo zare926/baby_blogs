@@ -1,0 +1,115 @@
+// ランキング全体
+.ranking_content{
+  width: 100%;
+  margin-top: 100px;
+  &-box{
+    position: relative;
+    max-width: 994px;
+    margin: 0 auto;
+    padding: 30px 0 0 20px;
+    .ranking_name{
+      position: absolute;
+      top: -30px;
+      left: 40px;
+      font-family: 'Cormorant Upright',serif;
+      font-size: 50px;
+      font-size: 3rem;
+      line-height: 1.1;
+      color: #808085;
+      z-index: 10;
+    }
+  }
+}
+
+// 各ランキング
+.ranking{
+  display: inline-block;
+  width: 320px;
+  height: 260px;
+  margin: 20px auto;
+  .ranking_box{
+    position: relative;
+    .ranking_image-fakebox{
+      position: relative;
+      .ranking_number{
+        z-index: 10;
+        position: absolute;
+        top: -21px;
+        left: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        color: white;
+        background: #c2c1c1;
+        border-radius: 50%;
+        font-family: 'Cormorant Upright',serif;
+        text-align: center;
+      }
+    }
+    .ranking_title{
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .ranking_count{
+      font-family: 'Cormorant Upright',serif;
+      color: rgb(158, 158, 158);
+      margin: 0.5em 0;
+      font-size: 13px;
+    }
+  }
+}
+
+
+  // フェードイン用
+.fadein {
+  opacity : 0;
+  transform: translateY(50px);
+  transition: 2s;
+}
+
+// 背景変化
+.ranking_box-back{
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 8px 15px;
+  max-width: 994px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: .3s;
+}
+.ranking_box-back:not(:first-of-type){
+  margin-top: 9rem;
+}
+.ranking_box-back::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  background: rgba(255, 255, 247, 0.699);
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+.ranking_box-back:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+// ランキング画像拡大
+
+.ranking_box-zoom img {
+	display: block;
+	transition: 0.5s;
+}
+.ranking_box-zoom img:hover {
+	transform: scale(1.05, 1.05);
+}

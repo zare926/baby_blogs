@@ -72,8 +72,8 @@ $(document).on('turbolinks:load', function(){
     const load = $('.loading');
     $(load).css({opacity:'1'});
     setTimeout(function(){
-        $(load).stop().animate({opacity:'0'},1000);
-    },1500);
+        $(load).stop().animate({opacity:'0'},400);
+    },1000);
   });
 
 
