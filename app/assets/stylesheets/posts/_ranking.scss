@@ -1,0 +1,22 @@
+.ranking_content{
+  position: relative;
+  width: 100%;
+  margin-top: 60px;
+  &-box{
+    max-width: 994px;
+    height: 100px;
+    margin: 0 auto;
+    background: red;
+    .ranking_name{
+      position: absolute;
+      top: -30px;
+      left: 155px;
+      font-family: 'Cormorant Upright',serif;
+      font-size: 50px;
+      font-size: 3rem;
+      line-height: 1.1;
+      color: #808085;
+      z-index: 10;
+    }
+  }
+}
