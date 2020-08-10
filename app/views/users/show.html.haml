@@ -14,3 +14,11 @@
       .user_setting
         %i.fas.fa-bars
 .show_info
+  .show_info-left
+    .show_info-leftname
+      = @user.nickname
+    .show_info-leftfollow
+      フォロー 100 フォロワー 200
+    .show_info-leftarticle
+      = "記事 #{@item.length}"
+  .show_info-right
