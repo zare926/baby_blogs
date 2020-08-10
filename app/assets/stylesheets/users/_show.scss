@@ -85,7 +85,6 @@
 // body系
 .show_info {
   width: 900px;
-  height: 300px;
   margin: 0 auto;
   display: flex;
   &-left{
@@ -105,5 +104,168 @@
   &-right{
     width: 50%;
     background-color: green;
+  }
+}
+
+// article
+.show_article{
+  width: 900px;
+  margin: 0 auto;
+}
+
+
+// show記事用
+.main_content{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  &-box{
+    max-width: 994px;
+    margin: 0 auto;
+    .article-list{
+      margin-top: 10rem;
+      .article{
+        visibility: visible;
+        animation-duration: 1.8s;
+        animation-delay: 0.2s;
+        animation-name: fadeIn;
+        &-image{
+          position: relative;
+          width: 55.82822%;
+          background: 50% 50%/cover no-repeat;
+          z-index: 1;
+          .image{
+            width: 100%;
+            height: auto;
+          }
+          .cover{
+            opacity: 0.7;
+          }
+          .image_box{
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            color: white;
+            font-family: 'Courier New','fantasy';
+            font-size: 30px;
+          }
+        }
+        &_text-box{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+          -ms-flex-line-pack: justify;
+          align-content: space-between;
+          width: 39.8773%;
+          line-height: 1.1;
+          z-index: 1;
+          &-top{
+            .article_logo{
+              position: absolute;
+              top: -30px;
+              left: 31px;
+              font-family: 'Cormorant Upright',serif;
+              font-size: 50px;
+              font-size: 3rem;
+              line-height: 1.1;
+              color: #808085;
+              z-index: 10;
+            }
+            .article_title{
+              color: #171717;
+              &-b{
+                margin-top: -.4rem;
+                font-weight: 700;
+                line-height: 1.6;
+              }
+              .article_time{
+                margin: 1rem 0 1.3rem;
+                font-size: 11px;
+                font-family: 'Open Sans',sans-serif;
+                color: #171717;
+              }
+            
+            }
+            .article_title p{
+              color: #808085;
+              font-size: 13px;
+              line-height: 1.5;
+            }
+          }
+          &-bottom{
+            .article_tag{
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: horizontal;
+              -webkit-box-direction: normal;
+              -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+              max-width: 384px;
+              margin-top: auto;
+              font-size: 13px;
+              font-family: 'Open Sans',sans-serif;
+              font-weight: 300;
+              font-style: italic;
+              &-name{
+                line-height: 1.8;
+                color: #171717;
+                .tag_link{
+                  color: #171717;
+                }
+              }
+            }
+          }
+        }
+      }
+      .b-article{
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 8px 15px;
+        max-width: 994px;
+        margin: 0 auto;
+        line-height: 0;
+        cursor: pointer;
+        transition: .3s;
+      }
+      .b-article:not(:first-of-type){
+        margin-top: 9rem;
+      }
+      .b-article::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        content: '';
+        background: rgba(255, 255, 247, 0.699);
+        transform-origin: right top;
+        transform: scale(0, 1);
+        transition: transform .3s;
+      }
+      .b-article:hover::before {
+        transform-origin: left top;
+        transform: scale(1, 1);
+      }
+      .fadein {
+        opacity : 0;
+        transform: translateY(50px);
+        transition: 1.5s;
+      }
+    }
   }
 }

@@ -1,0 +1,24 @@
+.main_content
+  .main_content-box
+    .article-list
+      - @item.each do |i|
+        .article.b-article.fadein
+          - if i.image.present?
+            %figre.article-image
+              = link_to (image_tag i.image.url,class:'image'),post_path(i.id)
+          - else
+            %figre.article-image
+              = link_to image_tag(asset_path('noimage.jpeg'), class:'image cover'),post_path(i.id)
+              .image_box NonImage
+          .article_text-box
+            .article_text-box-top
+              %p.article_logo BLOG
+              %a{href:post_path(i.id),class:'article_title'}
+                .article_title-b
+                  = i.title
+                %p.article_time
+                  = i.created_at.strftime("%Y.%m.%d %H:%M")
+                %p.article_summary
+                  = simple_format(i.text.truncate(150,omission: '...'))
+            .article_text-box-bottom
+      -# = paginate @item
