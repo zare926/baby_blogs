@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :time, only:[:index, :show,:new]
   PER = 7
 
   def new
@@ -23,6 +24,10 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).premit(:nickname,:icon,:email,:encrypted_password)
+  end
+
+  def time
+    @d = Date.today
   end
 
 end
