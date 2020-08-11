@@ -28,6 +28,19 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update
+    if post.save
+      redirect_to root_path and return
+    else
+      redirect_to new_post_path and return
+    end
+  end
+
   private 
 
   def post_params
