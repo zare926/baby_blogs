@@ -1,0 +1,274 @@
+// show用のタイトルロゴ
+.showpost_title{
+  position: fixed;
+  top: 21px;
+  left: 36px;
+  z-index: 200;
+  font-family: 'Courier New','fantasy';
+  &logo{
+    color: #575653;
+    font-size: 26px;
+  }
+}
+
+// header部分
+.user_show{
+  margin: 0 auto;
+  width: 1050px;
+  &-header{
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  &-box{
+    position: relative;
+    margin: 0 auto;
+    width: 900px;
+    &area{
+      position: absolute;
+      bottom: -75px;
+      width: 900px;
+      height: 150px;
+      .user_iconarea{
+        z-index: 10;
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 1px 2px gray;
+        margin-left: 25px;
+        .usershow_icon{
+          border-radius: 50%;
+        }
+      }
+      .user_follow{
+        display: inline-block;
+        width: 630px;
+        height: 120px;
+        &-box{
+          float: right;
+          width: 170px;
+          height: 80px;
+          text-align: center;
+          margin-top: 10px;
+          cursor: pointer;
+          user-select:none;
+          .follow_btn{
+            border: 2px solid rgb(248, 247, 230);
+            color: rgb(248, 247, 230);
+            font-size: 18px;
+            padding: 5px 0;
+            border-radius: 7px;
+            background-color: rgba(243, 243, 243, 0.192);
+          }
+        }
+      }
+      .user_setting{
+        position: relative;
+        display: inline-block;
+        width: 110px;
+        height: 120px;
+        .fa-bars{
+          border: 2px solid rgb(248, 247, 230);
+          padding: 5px 7px;
+          border-radius: 50%;
+          position: absolute;
+          top: 10px;
+          left: 15px;
+          font-size: 27px;
+          color: rgb(248, 247, 230);
+          background-color: rgba(243, 243, 243, 0.192);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// body系
+.show_info {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  &-left{
+    width: 30%;
+    &name{
+      font-size: 30px;
+      margin: 60px 0 0 20px;
+      color: #3a3a3a;
+    }
+    &follow{
+      margin: 10px 0 0 20px;
+    }
+    &article{
+      margin: 10px 0 0 20px;
+    }
+  }
+  &-right{
+    width: 70%;
+    // background-color: green;
+  }
+}
+
+// article
+.show_article{
+  width: 900px;
+  margin: 0 auto;
+}
+
+
+// show記事用
+.main_content{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  &-box{
+    max-width: 994px;
+    margin: 0 auto;
+    .article-list{
+      margin-top: 10rem;
+      .article{
+        visibility: visible;
+        animation-duration: 1.8s;
+        animation-delay: 0.2s;
+        animation-name: fadeIn;
+        &-image{
+          position: relative;
+          width: 55.82822%;
+          background: 50% 50%/cover no-repeat;
+          z-index: 1;
+          .image{
+            width: 100%;
+            height: auto;
+          }
+          .cover{
+            opacity: 0.7;
+          }
+          .image_box{
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            color: white;
+            font-family: 'Courier New','fantasy';
+            font-size: 30px;
+          }
+        }
+        &_text-box{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+          -ms-flex-line-pack: justify;
+          align-content: space-between;
+          width: 39.8773%;
+          line-height: 1.1;
+          z-index: 1;
+          &-top{
+            .article_logo{
+              position: absolute;
+              top: -30px;
+              left: 31px;
+              font-family: 'Cormorant Upright',serif;
+              font-size: 50px;
+              font-size: 3rem;
+              line-height: 1.1;
+              color: #808085;
+              z-index: 10;
+            }
+            .article_title{
+              color: #171717;
+              &-b{
+                margin-top: -.4rem;
+                font-weight: 700;
+                line-height: 1.6;
+              }
+              .article_time{
+                margin: 1rem 0 1.3rem;
+                font-size: 11px;
+                font-family: 'Open Sans',sans-serif;
+                color: #171717;
+              }
+            
+            }
+            .article_title p{
+              color: #808085;
+              font-size: 13px;
+              line-height: 1.5;
+            }
+          }
+          &-bottom{
+            .article_tag{
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: horizontal;
+              -webkit-box-direction: normal;
+              -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+              max-width: 384px;
+              margin-top: auto;
+              font-size: 13px;
+              font-family: 'Open Sans',sans-serif;
+              font-weight: 300;
+              font-style: italic;
+              &-name{
+                line-height: 1.8;
+                color: #171717;
+                .tag_link{
+                  color: #171717;
+                }
+              }
+            }
+          }
+        }
+      }
+      .b-article{
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 8px 15px;
+        max-width: 994px;
+        margin: 0 auto;
+        line-height: 0;
+        cursor: pointer;
+        transition: .3s;
+      }
+      .b-article:not(:first-of-type){
+        margin-top: 9rem;
+      }
+      .b-article::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        content: '';
+        background: rgba(255, 255, 247, 0.699);
+        transform-origin: right top;
+        transform: scale(0, 1);
+        transition: transform .3s;
+      }
+      .b-article:hover::before {
+        transform-origin: left top;
+        transform: scale(1, 1);
+      }
+      .fadein {
+        opacity : 0;
+        transform: translateY(50px);
+        transition: 1.5s;
+      }
+    }
+  }
+}
