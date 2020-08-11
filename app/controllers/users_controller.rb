@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  PER = 7
 
   def new
     
@@ -16,6 +17,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @item = @user.posts
+    @items = @item.order("created_at DESC").page(params[:page]).per(PER)
   end
 
   private
