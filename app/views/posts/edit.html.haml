@@ -1,0 +1,19 @@
+= render 'posts/header'
+%h1.editpost_title
+  = link_to 'Baby BLOGs', root_path,class:'editpost_titlelogo'
+.dammy_block
+.post
+  .post_form
+    = form_with(model: @post, local: true) do |f|
+      = f.text_field :title, class:'post_title',placeholder:'Blog Title'
+      .image_field 
+        %p.image_field-info
+          Image Select
+        = image_tag asset_path('baby_image.jpeg'),class:'image_area'
+        = f.file_field :image, class:'image_form'
+        .image_form-btn Image Select
+      .text_box.bootstrap
+        = f.text_area :text, class:'post_text','data-provider': :summernote
+      = f.submit '投稿', class:'post_submit'
+      .post_submit-dammy 投稿
+= render 'posts/footer'
