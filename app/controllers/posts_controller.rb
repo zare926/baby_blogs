@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_params, only:[:show,:edit]
+  before_action :set_params, only:[:show,:edit,:destroy]
   before_action :time, only:[:index, :show,:new,:edit]
   before_action :move_to_new, except: [:index,:show]
   PER = 7
@@ -38,6 +38,14 @@ class PostsController < ApplicationController
       redirect_to root_path and return
     else
       redirect_to new_post_path and return
+    end
+  end
+
+  def destroy
+    if @post.destroy
+      redirect_to root_path
+    else
+      render :show
     end
   end
 
