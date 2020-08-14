@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_params, only:[:show]
-  before_action :time, only:[:index, :show,:new]
+  before_action :set_params, only:[:show,:edit,:destroy]
+  before_action :time, only:[:index, :show,:new,:edit]
   before_action :move_to_new, except: [:index,:show]
   PER = 7
 
@@ -25,6 +25,27 @@ class PostsController < ApplicationController
       redirect_to root_path and return
     else
       redirect_to new_post_path and return
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params)
+    if post.save
+      redirect_to root_path and return
+    else
+      redirect_to new_post_path and return
+    end
+  end
+
+  def destroy
+    if @post.destroy
+      redirect_to root_path
+    else
+      render :show
     end
   end
 
