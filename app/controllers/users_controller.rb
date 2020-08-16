@@ -21,6 +21,14 @@ class UsersController < ApplicationController
     @items = @item.order("created_at DESC").page(params[:page]).per(PER)
   end
 
+  def edit
+
+  end
+
+  def update
+
+  end
+
   private
   def user_params
     params.require(:user).premit(:nickname,:icon,:email,:encrypted_password)

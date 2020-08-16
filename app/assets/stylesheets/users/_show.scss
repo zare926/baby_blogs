@@ -82,6 +82,15 @@
         }
       }
     }
+    .edit_box{
+      position: absolute;
+      right: -20px;
+      top: -20px;
+      z-index: 3;
+      width: 120px;
+      height: 80px;
+      background: red;
+    }
   }
 }
 
