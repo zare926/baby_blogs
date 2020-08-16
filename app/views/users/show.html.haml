@@ -7,7 +7,10 @@
   .user_show-box
     .user_show-boxarea
       .user_iconarea
-        = image_tag @user.icon.url ,class:'usershow_icon',size:'120x120'
+        - if @user.icon.present?
+          = image_tag @user.icon.url ,class:'usershow_icon',size:'120x120'
+        - else
+          = image_tag asset_path('new_baby.png'),class:'usershow_icon',size:'120x120'
       .user_follow
         .user_follow-box
           .follow_btn フォローする
