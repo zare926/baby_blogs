@@ -17,6 +17,9 @@
       .user_setting
         %i.fas.fa-bars
     .edit_box
+      = link_to 'ユーザー編集',edit_user_path(@user.id),class:'user_edit'
+      = link_to 'ユーザー削除',post_path(@user.id),method: :delete,class:'user_edit'
+      = link_to 'ログアウト',destroy_user_session_path,method: :delete,class:'user_edit'
 .show_info
   .show_info-left
     .show_info-leftname
