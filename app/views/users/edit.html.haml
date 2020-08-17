@@ -6,7 +6,7 @@
     .dammy_block
     .user_show
       = image_tag asset_path('show_header1.jpeg'),class:'user_show-header',size:'1050x250'
-      = f.select :bgi, User.bgis.keys,{},{class: 'bgi_chgnge'}
+      = f.select :bgi, User.bgis.keys,{},{class: 'bgi_chgnge',name:'bgi'}
       .user_show-box
         .user_show-boxarea
           .user_iconarea
