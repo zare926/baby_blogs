@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :time, only:[:index, :show,:new]
+  before_action :time, only:[:index, :show,:new,:edit]
   before_action :set_params, only:[:show,:edit,:destroy]
   PER = 7
 

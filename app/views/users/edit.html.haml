@@ -1,0 +1,24 @@
+= render 'posts/header'
+%h1.showpost_title
+  = link_to 'Baby BLOGs', root_path,class:'newpost_titlelogo'
+.user_editcontent
+  = form_with(model: @user, local: true) do |f|
+    .dammy_block
+    .user_show
+      = image_tag asset_path('show_header1.jpeg'),class:'user_show-header',size:'1050x250'
+      .user_show-box
+        .user_show-boxarea
+          .user_iconarea
+            - if @user.icon.present?
+              = image_tag @user.icon.url ,class:'usershow_icon',size:'120x120'
+              = f.file_field :icon, class:'icon_change'
+            - else
+              = image_tag asset_path('new_baby.png'),class:'usershow_icon',size:'120x120'
+              = f.file_field :icon, class:'icon_change'
+    .show_info
+      .show_info-left
+        .show_info-leftname
+          = f.text_field :nickname , class:'user_namechange'
+      .show_info-right
+    = f.submit '変更', class:'change_btn'
+= render 'posts/footer'
