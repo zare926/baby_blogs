@@ -18,7 +18,7 @@
         %i.fas.fa-bars
     .edit_box.clear_box
       = link_to 'ユーザー編集',edit_user_path(@user.id),class:'user_edit'
-      = link_to 'ユーザー削除',post_path(@user.id),method: :delete,class:'user_edit'
+      = link_to 'ユーザー削除',user_path(@user.id),method: :delete,data: {confirm: "削除しますか？"},class:'user_edit'
       = link_to 'ログアウト',destroy_user_session_path,method: :delete,class:'user_edit'
       .close_btn 閉じる
 .show_info
