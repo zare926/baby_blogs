@@ -4,6 +4,8 @@ class User < ApplicationRecord
 
   devise :validatable, password_length: 8..128
 
+  enum bgi: {'背景1':'0','背景2':'1','背景3':'2','背景4':'3','背景5':'4','背景6':'5','背景7':'6'}
+
   has_many :posts ,dependent: :destroy
 
   mount_uploader :icon, IconImageUploader
