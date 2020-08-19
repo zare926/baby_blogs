@@ -35,11 +35,14 @@ $(document).on('turbolinks:load', function(){
   $(function(){
     const iconBtn = $('.icon_change-dammy');
     const iconFakeBtn = $('.icon_change');
-    // const iconBtn = $('.icon_change-dammy');
-    // const iconFakeBtn = $('.icon_change');
+    const sendBtn = $('.change_btn');
+    const sendFakeBtn = $('.change_btn-fake');
 
     $(iconFakeBtn).on('mousedown',function(){
       $(iconBtn).click();
+    });
+    $(sendFakeBtn).on('mousedown',function(){
+      $(sendBtn).click();
     });
   });
 });
