@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_100821) do
+ActiveRecord::Schema.define(version: 2020_08_09_121830) do
 
   create_table "impressions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "impressionable_type"
@@ -41,11 +41,11 @@ ActiveRecord::Schema.define(version: 2020_08_19_100821) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "image"
     t.integer "user_id"
     t.integer "impressions_count", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -53,12 +53,12 @@ ActiveRecord::Schema.define(version: 2020_08_19_100821) do
     t.string "icon"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "bgi", default: "背景1"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "bgi", default: "背景1"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
