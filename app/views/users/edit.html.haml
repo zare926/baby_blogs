@@ -22,7 +22,7 @@
           .name_change-info ニックネーム変更
           = f.text_field :nickname , class:'user_namechange',placeholder:'ニックネームを入力してください'
           .bgi_change-info 背景画像変更
-          = f.select :bgi,[['Plant','背景1'],['Tree','背景2'],['Starry sky','背景3'],['Mountain','背景4'],['Butterfly','背景5'],['Flowers other','背景6'],['Other','背景7'],],class:'bgi_change',name:'bgi'
+          = f.select :bgi,[['Flowers other','背景1'],['Tree','背景2'],['Starry sky','背景3'],['Mountain','背景4'],['Butterfly','背景5'],['Plant','背景6'],['Other','背景7'],],class:'bgi_change',name:'bgi'
         .change_introduction-area
           = f.text_area :introduction , class:'introduction_change',placeholder:'自己紹介など(280文字まで)'
       .submit_area
