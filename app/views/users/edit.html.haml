@@ -12,14 +12,16 @@
           .user_iconarea
             - if @user.icon.present?
               = image_tag @user.icon.url ,class:'usershow_icon',size:'120x120'
-              = f.file_field :icon, class:'icon_change'
             - else
               = image_tag asset_path('new_baby.png'),class:'usershow_icon',size:'120x120'
-              = f.file_field :icon, class:'icon_change'
-    .show_info
-      .show_info-left
-        .show_info-leftname
-          = f.text_field :nickname , class:'user_namechange'
-      .show_info-right
-    = f.submit '変更', class:'change_btn'
+          = f.file_field :icon, class:'icon_change-dammy'
+          .icon_change-info プロフィール画像変更
+          .icon_change 画像選択
+      .change_field
+        .change_name-area
+          .name_change-info ニックネーム変更
+          = f.text_field :nickname , class:'user_namechange',placeholder:'ニックネームを入力してください'
+          = f.submit '変更', class:'change_btn'
+        .change_introduction-area
+          = f.text_area :introduction , class:'introduction_change',placeholder:'自己紹介など(280文字まで)'
 = render 'posts/footer'
