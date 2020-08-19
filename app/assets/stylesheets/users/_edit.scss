@@ -76,11 +76,12 @@ input:-ms-input-placeholder {
   .change_introduction-area{
     width: 65%;
     .introduction_change{
-      width: 100%;
-      height: 100%;
+      width: 98%;
+      height: 96%;
       border-radius: 5px;
       resize: none;
       border: 1px solid grey;
+      padding: 5px;
     }
   }
 }
