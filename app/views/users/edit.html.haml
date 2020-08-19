@@ -5,7 +5,20 @@
   = form_with(model: @user, local: true) do |f|
     .dammy_block
     .user_show
-      = image_tag asset_path('show_header1.jpeg'),class:'user_show-header',size:'1050x250'
+      - if @user.bgi == "背景1"
+        = image_tag asset_path('show_header1.jpeg'),class:'user_show-header',size:'1050x250'
+      - elsif @user.bgi == "背景2"
+        = image_tag asset_path('show_header2.jpeg'),class:'user_show-header',size:'1050x250'
+      - elsif @user.bgi == "背景3"
+        = image_tag asset_path('show_header3.jpeg'),class:'user_show-header',size:'1050x250'
+      - elsif @user.bgi == "背景4"
+        = image_tag asset_path('show_header4.jpeg'),class:'user_show-header',size:'1050x250'
+      - elsif @user.bgi == "背景5"
+        = image_tag asset_path('show_header5.jpeg'),class:'user_show-header',size:'1050x250'
+      - elsif @user.bgi == "背景6"
+        = image_tag asset_path('show_header6.jpeg'),class:'user_show-header',size:'1050x250'
+      - elsif @user.bgi == "背景7"
+        = image_tag asset_path('show_header7.jpeg'),class:'user_show-header',size:'1050x250'
       .image_select-area
       .user_show-box
         .user_show-boxarea
@@ -27,5 +40,5 @@
           = f.text_area :introduction , class:'introduction_change',placeholder:'自己紹介など(280文字まで)'
       .submit_area
         = f.submit '変更', class:'change_btn'
-        .change_btn-fake 送信
+        .change_btn-fake 変更
 = render 'posts/footer'

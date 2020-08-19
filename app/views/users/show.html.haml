@@ -3,7 +3,20 @@
   = link_to 'Baby BLOGs', root_path,class:'newpost_titlelogo'
 .dammy_block
 .user_show
-  = image_tag asset_path('show_header1.jpeg'),class:'user_show-header',size:'1050x250'
+  - if @user.bgi == "背景1"
+    = image_tag asset_path('show_header1.jpeg'),class:'user_show-header',size:'1050x250'
+  - elsif @user.bgi == "背景2"
+    = image_tag asset_path('show_header2.jpeg'),class:'user_show-header',size:'1050x250'
+  - elsif @user.bgi == "背景3"
+    = image_tag asset_path('show_header3.jpeg'),class:'user_show-header',size:'1050x250'
+  - elsif @user.bgi == "背景4"
+    = image_tag asset_path('show_header4.jpeg'),class:'user_show-header',size:'1050x250'
+  - elsif @user.bgi == "背景5"
+    = image_tag asset_path('show_header5.jpeg'),class:'user_show-header',size:'1050x250'
+  - elsif @user.bgi == "背景6"
+    = image_tag asset_path('show_header6.jpeg'),class:'user_show-header',size:'1050x250'
+  - elsif @user.bgi == "背景7"
+    = image_tag asset_path('show_header7.jpeg'),class:'user_show-header',size:'1050x250'
   .user_show-box
     .user_show-boxarea
       .user_iconarea
