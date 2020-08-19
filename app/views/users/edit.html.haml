@@ -1,0 +1,44 @@
+= render 'posts/header'
+%h1.showpost_title
+  = link_to 'Baby BLOGs', root_path,class:'newpost_titlelogo'
+.user_editcontent
+  = form_with(model: @user, local: true) do |f|
+    .dammy_block
+    .user_show
+      - if @user.bgi == "背景1"
+        = image_tag asset_path('show_header1.jpeg'),class:'user_show-header',size:'1050x250'
+      - elsif @user.bgi == "背景2"
+        = image_tag asset_path('show_header2.jpeg'),class:'user_show-header',size:'1050x250'
+      - elsif @user.bgi == "背景3"
+        = image_tag asset_path('show_header3.jpeg'),class:'user_show-header',size:'1050x250'
+      - elsif @user.bgi == "背景4"
+        = image_tag asset_path('show_header4.jpeg'),class:'user_show-header',size:'1050x250'
+      - elsif @user.bgi == "背景5"
+        = image_tag asset_path('show_header5.jpeg'),class:'user_show-header',size:'1050x250'
+      - elsif @user.bgi == "背景6"
+        = image_tag asset_path('show_header6.jpeg'),class:'user_show-header',size:'1050x250'
+      - elsif @user.bgi == "背景7"
+        = image_tag asset_path('show_header7.jpeg'),class:'user_show-header',size:'1050x250'
+      .image_select-area
+      .user_show-box
+        .user_show-boxarea
+          .user_iconarea
+            - if @user.icon.present?
+              = image_tag @user.icon.url ,class:'usershow_icon',size:'120x120'
+            - else
+              = image_tag asset_path('new_baby.png'),class:'usershow_icon',size:'120x120'
+          = f.file_field :icon, class:'icon_change-dammy'
+          .icon_change-info プロフィール画像変更
+          .icon_change 画像選択
+      .change_field
+        .change_name-area
+          .name_change-info ニックネーム変更
+          = f.text_field :nickname , class:'user_namechange',placeholder:'ニックネームを入力してください'
+          .bgi_change-info 背景画像変更
+          = f.select :bgi,[['Flowers other','背景1'],['Tree','背景2'],['Starry sky','背景3'],['Mountain','背景4'],['Butterfly','背景5'],['Plant','背景6'],['Other','背景7'],],class:'bgi_change',name:'bgi'
+        .change_introduction-area
+          = f.text_area :introduction , class:'introduction_change',placeholder:'自己紹介など(280文字まで)'
+      .submit_area
+        = f.submit '変更', class:'change_btn'
+        .change_btn-fake 変更
+= render 'posts/footer'
