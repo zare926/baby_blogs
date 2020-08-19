@@ -8,7 +8,8 @@ $(document).on('turbolinks:load', function(){
       return false;
   });
   
-  $('[name=bgi').change(function() {
+  // ユーザー編集画面で背景確認ができるように
+  $('[name="user[bgi]"]').change(function() {
 
   let bgi = $(this).val();
   let Img = $('.user_show-header').attr('src');

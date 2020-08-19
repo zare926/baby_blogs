@@ -26,7 +26,14 @@ class UsersController < ApplicationController
   end
 
   def update
-
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    if @user.save
+      # binding.pry
+      redirect_to root_path and return
+    else
+      redirect_to edit_user_path and return
+    end
   end
 
   def destroy
@@ -39,7 +46,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).premit(:nickname,:icon,:email,:encrypted_password)
+    params.require(:user).permit(:nickname,:icon,:bgi,:email,:encrypted_password)
   end
 
   def set_params
