@@ -1,3 +1,16 @@
+input::-webkit-input-placeholder {
+  font-size: 9px;
+}
+input:-moz-placeholder {
+  font-size: 9px;
+}
+input::-moz-placeholder {
+  font-size: 9px;
+}
+input:-ms-input-placeholder {
+  font-size: 9px;
+}
+
 .user_editcontent{
   height: 800px;
 }
@@ -47,6 +60,18 @@
     .name_change-info{
       margin: 10px 0 0 19px;
     }
+    .bgi_change-info{
+      margin: 10px 0 0 19px;
+    }
+    #user_bgi{
+      padding: 0 5px;
+      width: 150px;
+      height: 30px;
+      font-size: 14px;
+      margin:5px 0 0 19px;
+      border: 1px solid grey;
+      border-radius: 4px;
+    }
   }
   .change_introduction-area{
     width: 65%;
@@ -60,18 +85,32 @@
   }
 }
 
-
-
-
-input::-webkit-input-placeholder {
-  font-size: 9px;
-}
-input:-moz-placeholder {
-  font-size: 9px;
-}
-input::-moz-placeholder {
-  font-size: 9px;
-}
-input:-ms-input-placeholder {
-  font-size: 9px;
+.submit_area{
+  padding-top: 20px;
+  width: 900px;
+  margin: 0 auto;
+  .change_btn{
+    display: none;
+  }
+  .change_btn-fake{
+    float: right;
+    cursor: pointer;
+    user-select: none;
+    width: 150px;
+    height: 30px;
+    box-shadow: 0 2px 1px grey;
+    text-align: center;
+    border: 1px solid gray;
+    line-height: 30px;
+    border-radius: 4px;
+    background-color: white;
+  }
+  .change_btn-fake:hover{
+    background-color: rgb(223, 223, 221);
+  }
+  .change_btn-fake:active{
+    margin-top: 2px;
+    box-shadow: 0 0 1px gray;
+  }
+  
 }

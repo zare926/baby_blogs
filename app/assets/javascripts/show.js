@@ -30,4 +30,16 @@ $(document).on('turbolinks:load', function(){
       $(nowImg).attr('src','/assets/show_header7.jpg');
     }
     });
+
+  // 画像選択
+  $(function(){
+    const iconBtn = $('.icon_change-dammy');
+    const iconFakeBtn = $('.icon_change');
+    // const iconBtn = $('.icon_change-dammy');
+    // const iconFakeBtn = $('.icon_change');
+
+    $(iconFakeBtn).on('mousedown',function(){
+      $(iconBtn).click();
+    });
+  });
 });
