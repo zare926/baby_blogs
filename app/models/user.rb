@@ -14,4 +14,5 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   validates :password, presence: true, format: { with: /\A[a-zA-Z0-9]+\z/, message: "は半角英数字で入力してください"}, length: { minimum: 8 }, on: :create
   validates :bgi , presence: true
+  validates :introduction , length: { maximum: 280 }
 end
