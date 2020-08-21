@@ -1,13 +1,13 @@
-input::-webkit-input-placeholder {
+.user_namechange::-webkit-input-placeholder {
   font-size: 9px;
 }
-input:-moz-placeholder {
+.user_namechange:-moz-placeholder {
   font-size: 9px;
 }
-input::-moz-placeholder {
+.user_namechange::-moz-placeholder {
   font-size: 9px;
 }
-input:-ms-input-placeholder {
+.user_namechange:-ms-input-placeholder {
   font-size: 9px;
 }
 
@@ -75,6 +75,7 @@ input:-ms-input-placeholder {
   }
   .change_introduction-area{
     width: 65%;
+    z-index: 5;
     .introduction_change{
       width: 98%;
       height: 96%;
@@ -82,6 +83,11 @@ input:-ms-input-placeholder {
       resize: none;
       border: 1px solid grey;
       padding: 5px;
+    }
+    .count{
+      font-size: 15px;
+      margin-top: 5px;
+      color: grey;
     }
   }
 }

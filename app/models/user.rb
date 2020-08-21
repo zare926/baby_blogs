@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   mount_uploader :icon, IconImageUploader
 
-  validates :nickname , presence: true
+  validates :nickname , presence: true, length: { maximum: 8 }
   validates :email, presence: true, 
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i, message: "は@とドメインを含んだものを入力してください" }, 
                     uniqueness: { case_sensitive: false }
