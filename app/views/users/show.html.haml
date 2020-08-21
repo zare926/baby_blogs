@@ -43,7 +43,10 @@
     .show_info-leftarticle
       = "記事数 : #{@item.length}"
   .show_info-right
-
+    .show_info-rightintroduction
+      Introduction
+      .show_info-rightintroduction-area
+        = simple_format(@user.introduction)
 .show_article
   = render 'users/blog'
 = render 'posts/footer'

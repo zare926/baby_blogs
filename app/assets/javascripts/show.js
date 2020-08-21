@@ -74,4 +74,20 @@ $(document).on('turbolinks:load', function(){
     })(file);
     reader.readAsDataURL(file);
   });
+
+  // 文字数カウント
+  $('.introduction_change').keyup(function(){
+    let count = $(this).val().length;
+    
+
+    if(count > 350){
+      $('.count').text(count+'/350 文字');
+      $('.count').css('color','red');
+      $('.count').text(count+'/350 文字 オーバーしてます');
+    }
+    else if(count <= 350){
+      $('.count').text(count+'/350 文字');
+      $('.count').css('color','grey');
+    }
+  });
 });
