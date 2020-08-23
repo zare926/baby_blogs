@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :time, only:[:index, :show,:new,:edit]
   before_action :set_params, only:[:show,:edit,:destroy]
+  before_action :move_to_edit, only:[:edit]
   PER = 7
 
   def new
@@ -54,6 +55,13 @@ class UsersController < ApplicationController
 
   def time
     @d = Date.today
+  end
+
+  def move_to_edit
+    @user = User.find(params[:id])
+    if current_user.id != @user.id
+      redirect_to root_path
+    end
   end
 
 end

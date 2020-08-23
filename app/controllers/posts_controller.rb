@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :set_params, only:[:show,:edit,:destroy]
   before_action :time, only:[:index, :show,:new,:edit]
   before_action :move_to_new, except: [:index,:show]
+  before_action :move_to_edit, only: [:edit]
   PER = 7
 
   def index
@@ -67,4 +68,11 @@ class PostsController < ApplicationController
     redirect_to action: :index unless user_signed_in?
   end
   
+  def move_to_edit
+    @post = Post.find(params[:id])
+    if @post.user_id != current_user.id
+      redirect_to root_path
+    end
+  end
+
 end
