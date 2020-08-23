@@ -18,4 +18,7 @@ class User < ApplicationRecord
   validates :bgi , presence: true
   validates :introduction , length: { maximum: 350 }
   
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
+  end
 end
