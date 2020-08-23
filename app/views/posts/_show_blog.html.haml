@@ -13,6 +13,8 @@
       - if user_signed_in? && current_user.id == @post.user_id
         = link_to '編集', edit_post_path(@post.id),method: :get,class:'edit_btn'
         = link_to '削除',post_path(@post.id),method: :delete, class:'delete_btn'
+      - else
+        = button_to 'いいね'
     .show_main-article-content
       %nav.article_sns
         %ul.article_sns-box
@@ -54,6 +56,8 @@
       - if user_signed_in? && current_user.id == @post.user_id
         = link_to '編集', edit_post_path(@post.id),method: :get,class:'edit_btn'
         = link_to '削除',post_path(@post.id), method: :delete, class:'delete_btn'
+      - else
+        = button_to 'いいね'
     .show_main-article-content
       %nav.article_sns
         %ul.article_sns-box

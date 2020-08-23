@@ -97,6 +97,10 @@ $(document).on('turbolinks:load', function(){
       $(realBtn).click();
     });
   });
+
+  const noteIconColor = $('.note-recent-color');
+
+  noteIconColor.css('background-color','bisque')
 });
 
 $(document).on('turbolinks:load', function(){

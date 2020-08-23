@@ -115,7 +115,7 @@
     background-color: rgb(223, 223, 221);
   }
   .post_submit-dammy:active{
-    margin: 12px 0 8px 25px;
+    margin: 12px 0 18px 25px;
     box-shadow: 0 0 1px gray;
   }
 }
@@ -123,4 +123,11 @@
 // summernoteの画像投稿ボタン消す
 .note-btn-group.btn-group.note-insert{
   display: none;
+}
+
+.note-icon-font{
+  background-color: red;
+}
+.note-recent-color{
+  background-color: red;
 }
