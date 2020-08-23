@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   resources :posts do
     resources :likes, only: [:create, :destroy]
   end
-  resources :users, only: [:index,:show,:edit,:update,:destroy]
+  resources :users, only: [:index,:show,:edit,:update,:destroy] do
+    collection do
+      get :likes
+    end
+  end
   root to: 'posts#index'
 end
