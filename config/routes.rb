@@ -4,9 +4,7 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
   resources :users, only: [:index,:show,:edit,:update,:destroy] do
-    collection do
-      get :likes
-    end
+    resources :likes, only: [:index]
   end
   root to: 'posts#index'
 end
