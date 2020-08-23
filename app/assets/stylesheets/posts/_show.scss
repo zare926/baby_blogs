@@ -134,12 +134,12 @@
   cursor: pointer;
   display: inline-block;
   border: 1px solid grey;
-  padding: 3px 8px 3px 0;
+  padding: 3px 12px 3px 0;
   border-radius: 3px;
   box-shadow: 0 2px 0 0 gray;
   .fa-thumbs-up{
     display: inline-block;
-    margin-left: 8px;
+    margin-left: 12px;
     color: grey;
   }
   &count{
@@ -158,9 +158,9 @@
 .like_on{
   border: 1px solid rgb(236, 216, 171);
   box-shadow: 0 2px 0 0 grey;
-  background-color: rgb(247, 207, 205);
+  background-color: rgb(231, 207, 205);
   .fa-thumbs-up{
-    color: rgb(255, 253, 241);
+    color: white;
   }
   .like_on-count{
     color: white;

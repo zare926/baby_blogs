@@ -14,18 +14,7 @@
         = link_to '編集', edit_post_path(@post.id),method: :get,class:'edit_btn'
         = link_to '削除',post_path(@post.id),method: :delete, class:'delete_btn'
       - else
-        - if current_user.already_liked?(@post)
-          = button_to 'いいね',post_like_path(@post), method: :delete,class:'likebtn'
-          .likebtn_dammy.like_on
-            %i.far.fa-thumbs-up
-            .likebtn_dammycount.like_on-count
-              いいね #{@post.likes.count}
-        - else
-          = button_to 'いいね',post_likes_path(@post),class:'likebtn'
-          .likebtn_dammy
-            %i.far.fa-thumbs-up
-            .likebtn_dammycount
-              いいね #{@post.likes.count}
+        = render 'likes/likebtn'
     .show_main-article-content
       %nav.article_sns
         %ul.article_sns-box
