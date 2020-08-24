@@ -15,6 +15,8 @@ class PostsController < ApplicationController
   def show
     impressionist(@post, nil)
     @like = Like.new
+    @comment = Comment.new
+    @comments = @post.comments
   end
 
   def new
