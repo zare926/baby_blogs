@@ -1,0 +1,19 @@
+.like_area{
+  margin: 0 auto;
+  width: 1050px;
+  &-box{
+    margin: 20px auto -65px;
+    width: 370px;
+    &info{
+      display: inline-block;
+      font-size: 40px;
+      font-family: 'Courier New','fantasy';
+      color: #575653;
+    }
+    .fa-thumbs-up{
+      display: inline-block;
+      font-size: 28px;
+      color: #575653;
+    }
+  }
+}

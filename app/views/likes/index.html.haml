@@ -1,0 +1,14 @@
+= render 'posts/header'
+%h1.showpost_title
+  = link_to 'Baby BLOGs', root_path,class:'newpost_titlelogo'
+= render 'users/usershow'
+.show_info
+  .show_info-left
+    .show_info-leftname
+      = @user.nickname
+.like_area
+  .like_area-box
+    .like_area-boxinfo User Like List
+    %i.far.fa-thumbs-up
+= render 'posts/blog'
+= render 'posts/footer'

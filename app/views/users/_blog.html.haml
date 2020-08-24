@@ -1,7 +1,7 @@
 .main_content
   .main_content-box
     .article-list
-      - @items.each do |i|
+      - @posts.each do |i|
         .article.b-article.fadein
           - if i.image.present?
             %figre.article-image
@@ -21,4 +21,4 @@
                 %p.article_summary
                   = simple_format(i.text.truncate(150,omission: '...'))
             .article_text-box-bottom
-      = paginate @items
+      = paginate @posts

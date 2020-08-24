@@ -7,6 +7,13 @@ $(document).on('turbolinks:load', function(){
       $('.edit_box').addClass('clear_box');
       return false;
   });
+
+  const likeBtn = $('.likebtn')
+  const dammy = $('.likebtn_dammy')
+
+  $(dammy).on('mousedown',function(){
+    $(likeBtn).click();
+  });
   
   // ユーザー編集画面で背景確認ができるように
   $('[name="user[bgi]"]').change(function() {
@@ -90,4 +97,7 @@ $(document).on('turbolinks:load', function(){
       $('.count').css('color','grey');
     }
   });
+
+
+  $
 });

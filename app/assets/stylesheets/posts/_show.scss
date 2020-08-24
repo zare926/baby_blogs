@@ -125,3 +125,44 @@
     }
   }
 }
+
+// いいねボタン
+.likebtn{
+  display: none;
+}
+.likebtn_dammy{
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid grey;
+  padding: 3px 12px 3px 0;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 0 gray;
+  .fa-thumbs-up{
+    display: inline-block;
+    margin-left: 12px;
+    color: grey;
+  }
+  &count{
+    display: inline-block;
+    color: grey;
+  }
+}
+.likebtn_dammy:hover{
+  background-color: rgb(223, 223, 221);
+}
+.likebtn_dammy:active{
+  margin-top: 2px;
+  box-shadow: 0 0 1px gray;
+}
+
+.like_on{
+  border: 1px solid rgb(236, 216, 171);
+  box-shadow: 0 2px 0 0 grey;
+  background-color: rgb(231, 207, 205);
+  .fa-thumbs-up{
+    color: white;
+  }
+  .like_on-count{
+    color: white;
+  }
+}

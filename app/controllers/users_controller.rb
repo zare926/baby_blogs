@@ -18,8 +18,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @item = @user.posts
-    @items = @item.order("created_at DESC").page(params[:page]).per(PER)
+    @post = @user.posts
+    @posts = @post.order("created_at DESC").page(params[:page]).per(PER)
   end
 
   def edit
