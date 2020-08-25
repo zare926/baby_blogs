@@ -2,45 +2,5 @@
 %h1.newpost_title
   = link_to 'Baby BLOGs', root_path,class:'newpost_titlelogo'
 = render 'posts/show_blog'
-.comment_zone
-  - if @comments
-    - @comments.each do |c|
-      .comment_zone-box
-        - if current_user.id == c.post.user.id or c.user.id == current_user.id
-          .comment_zone-box-leftactive
-            .comment_time
-              .comment_time-area
-                = c.created_at.strftime("%Y.%m.%d %H:%M")
-            .comment
-              = simple_format(c.content)
-            .comment_user
-              .comment_username
-                = c.user.nickname
-            = link_to 'コメント削除',post_comment_path(@post,c) , method: :delete,class:'comment_userdelete',data: { confirm: '本当によろしいですか?' }
-          .comment_zone-box-rightactive
-            - if c.user.icon.present?
-              = link_to image_tag(c.user.icon.url,size:"80x80",class:"comment_usericon"),user_path(c.user.id)
-            - else
-              = link_to image_tag(asset_path('new_baby.png'),size:"80x80",class:"comment_usericon"),user_path(c.user.id)
-        - else
-          .comment_zone-box-left
-            - if c.user.icon.present?
-              = link_to image_tag(c.user.icon.url,size:"80x80",class:"comment_usericon"),user_path(c.user.id)
-            - else
-              = link_to image_tag(asset_path('new_baby.png'),size:"80x80",class:"comment_usericon"),user_path(c.user.id)
-          .comment_zone-box-right
-            .comment_time
-              .comment_time-area
-                = c.created_at.strftime("%Y.%m.%d %H:%M")
-            .comment
-              = simple_format(c.content)
-            .comment_user
-              .comment_username
-                = c.user.nickname
-.comment_area
-  = form_with(model: [@post,@comment], local: true,class:"comment_area-form") do |f|
-    = f.text_area :content, placeholder: "コメント", class: "comment_box"
-    = f.submit class:"comment_submit"
-.comment_submit-area
-  .submit_dammy 送信
+= render 'comments/blog_comment'
 = render 'posts/footer'

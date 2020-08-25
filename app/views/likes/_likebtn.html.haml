@@ -1,11 +1,18 @@
-- if current_user.already_liked?(@post)
-  = button_to 'いいね',post_like_path(@post), method: :delete,class:'likebtn'
-  .likebtn_dammy.like_on
-    %i.far.fa-thumbs-up
-    .likebtn_dammycount.like_on-count
-      いいね #{@post.likes.count}
-- else
-  = button_to 'いいね',post_likes_path(@post),class:'likebtn'
+- if user_signed_in?
+  - if current_user.already_liked?(@post)
+    = button_to 'いいね',post_like_path(@post), method: :delete,class:'likebtn'
+    .likebtn_dammy.like_on
+      %i.far.fa-thumbs-up
+      .likebtn_dammycount.like_on-count
+        いいね #{@post.likes.count}
+  - else
+    = button_to 'いいね',post_likes_path(@post),class:'likebtn'
+    .likebtn_dammy
+      %i.far.fa-thumbs-up
+      .likebtn_dammycount
+        いいね #{@post.likes.count}
+- else 
+  .likebtn いいね
   .likebtn_dammy
     %i.far.fa-thumbs-up
     .likebtn_dammycount
