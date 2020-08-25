@@ -15,6 +15,12 @@ $(document).on('turbolinks:load', function(){
     $(likeBtn).click();
   });
 
+  const submitBtn = $('.comment_submit');
+  const dammySubmit = $('.submit_dammy');
+
+  $(dammySubmit).on('mousedown',function(){
+    $(submitBtn).click();
+  });
   
   // ユーザー編集画面で背景確認ができるように
   $('[name="user[bgi]"]').change(function() {
