@@ -33,16 +33,6 @@
         .article_user
           = link_to @post.user.nickname, '#'
       .article_border
-      %nav.article_sns
-        %ul.article_sns-box
-          = link_to '#' do
-            %li.sns_icon-twitter
-              %i.fab.fa-twitter
-              ツイート
-          = link_to '#' do
-            %li.sns_icon-facebook
-              %i.fab.fa-facebook-square
-              シェア
   - else
     .show_main-article-image
       = image_tag asset_path('noimage.jpeg'),size:'850x525', class:'show_image'
@@ -76,13 +66,3 @@
         .article_user
           = link_to @post.user.nickname, '#'
       .article_border
-      %nav.article_sns
-        %ul.article_sns-box
-          = link_to '#' do
-            %li.sns_icon-twitter
-              %i.fab.fa-twitter
-              ツイート
-          = link_to '#' do
-            %li.sns_icon-facebook
-              %i.fab.fa-facebook-square
-              シェア

@@ -1,0 +1,75 @@
+
+.comment_zone{
+  width: 700px;
+  height: 400px;
+  background: red;
+  margin: 30px auto 0;
+  &-box{
+    width: 680px;
+    margin: 0 auto;
+    display: flex;
+    &-right{
+      width: 15%;
+      height: 100px;
+      background: blue;
+    }
+    &-left{
+      width: 85%;
+      height: 100px;
+      background: green;
+    }
+    &-rightavtive{
+      width: 85%;
+      height: 100px;
+      background: green;
+    }
+    &-leftavtive{
+      width: 15%;
+      height: 100px;
+      background: blue;
+    }
+  }
+}
+
+
+
+.comment_area{
+  width: 850px;
+  margin: 30px auto 0;
+  &-form{
+    .comment_box{
+      width: 692px;
+      height: 200px;
+      resize: none;
+      display: block;
+      margin: 0 auto;
+      padding: 4px;
+    }
+    .comment_submit{
+      display: none;
+    }
+  }
+}
+
+.submit_area{
+  width: 700px;
+  .submit_dammy{
+    cursor: pointer;
+    width: 90px;
+    height: 35px;
+    border: 1px solid grey;
+    float: right;
+    text-align: center;
+    line-height: 35px;
+    box-shadow: 0 2px 1px 1px grey;
+    user-select: none;
+    font-size: 15px;
+  }
+  .submit_dammy:hover{
+    background-color: rgb(223, 223, 221);
+  }
+  .submit_dammy:active{
+    margin-top: 2px;
+    box-shadow: 0 0 1px gray;
+  }
+}

@@ -2,4 +2,18 @@
 %h1.newpost_title
   = link_to 'Baby BLOGs', root_path,class:'newpost_titlelogo'
 = render 'posts/show_blog'
+.comment_zone
+  .comment_zone-box
+    .comment_zone-box-right
+      
+    .comment_zone-box-left
+    .comment_zone-box-rightactive
+      
+    .comment_zone-box-leftactive
+.comment_area
+  = form_with(model: [@post,@comment], local: true,class:"comment_area-form") do |f|
+    = f.text_area :content, placeholder: "コメント", class: "comment_box"
+    = f.submit class:"comment_submit"
+.submit_area
+  .submit_dammy 送信
 = render 'posts/footer'
